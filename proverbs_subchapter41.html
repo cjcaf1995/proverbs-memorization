@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html>
+    <body style="background-color: #4e6856;">
+        <script>
+
+                        // EXAMPLE
+                        // https://clozer0915.tumblr.com/?theWords=bible-wisdom-books
+
+                        var links = [];
+
+                        function randomIntFromInterval(min, max) { // min and max included
+                            // const randomNumber = (7 / getRandomNumber(uuidv4())) % 1;
+                            const randomNumber = Math.random();
+                            return Math.floor(randomNumber * (Number(max) - Number(min) + 1)) + Number(min);
+                        }
+
+                        openStuff = function () {
+
+                            const queryString = window.location.search;
+                            const urlParams = new URLSearchParams(queryString);
+
+							const chapter1_1Arr = [
+                                "C1V1 The proverbs of Solomon the son of David, king of Israel:",
+                                "C1V2 To know wisdom and instruction, To discern the sayings of understanding,",
+                                "C1V3 To receive instruction in wise behavior, Righteousness, justice, and integrity;",
+                                "C1V4 To give prudence to the naive, To the youth knowledge and discretion,",
+                                "C1V5 A wise person will hear and increase in learning, And a person of understanding will acquire wise counsel,",
+                                "C1V6 To understand a proverb and a saying, The words of the wise and their riddles.",
+                                "C1V7 The fear of the Lord is the beginning of knowledge; Fools despise wisdom and instruction."
+								];
+								
+                            const chapter1_2Arr = [
+                                "C1V8 Listen, my son, to your father’s instruction, And do not ignore your mother’s teaching;",
+                                "C1V9 For they are a graceful wreath for your head And necklaces for your neck.",
+                                "C1V10 My son, if sinners entice you, Do not consent.",
+                                "C1V11 If they say, _Come with us, Let’s lie in wait for blood, Let’s ambush the innocent without cause;",
+                                "C1V12 Let’s swallow them alive like Sheol, Even whole, like those who go down to the pit;",
+                                "C1V13 We will find all kinds of precious wealth, We will fill our houses with plunder;",
+                                "C1V14 Throw in your lot with us; We will all have one money bag,_",
+                                "C1V15 My son, do not walk on the way with them. Keep your feet from their path,",
+                                "C1V16 For their feet run to evil, And they are quick to shed blood.",
+                                "C1V17 Indeed, it is useless to spread the baited net In the sight of any bird;",
+                                "C1V18 But they lie in wait for their own blood; They ambush their own lives.",
+                                "C1V19 Such are the ways of everyone who makes unjust gain; It takes away the life of its possessors."
+                            ];
+
+                            const chapter1_3Arr = [
+                                "C1V20 Wisdom shouts in the street, She raises her voice in the public square;",
+                                "C1V21 At the head of the noisy streets she cries out; At the entrance of the gates in the city she declares her sayings:",
+                                "C1V22 _How long, you naive ones, will you love simplistic thinking_ And how long will scoffers delight themselves in scoffing And fools hate knowledge_",
+                                "C1V23 Turn to my rebuke, Behold, I will pour out my spirit on you; I will make my words known to you.",
+                                "C1V24 Because I called and you refused, I stretched out my hand and no one paid attention;",
+                                "C1V25 And you neglected all my advice And did not want my rebuke;",
+                                "C1V26 I will also laugh at your disaster; I will mock when your dread comes,",
+                                "C1V27 When your dread comes like a storm And your disaster comes like a whirlwind, When distress and anguish come upon you.",
+                                "C1V28 Then they will call on me, but I will not answer; They will seek me diligently but will not find me,",
+                                "C1V29 Because they hated knowledge And did not choose the fear of the Lord.",
+                                "C1V30 They did not accept my advice, They disdainfully rejected every rebuke from me.",
+                                "C1V31 So they shall eat of the fruit of their own way, And be filled with their own schemes.",
+                                "C1V32 For the faithlessness of the naive will kill them, And the complacency of fools will destroy them.",
+                                "C1V33 But whoever listens to me will live securely And will be at ease from the dread of evil._"
+                            ];
+
+                            const chapter2Arr = [
+                                "C2V1 My son, if you will receive my words And treasure my commandments within you,",
+                                "C2V2 Make your ear attentive to wisdom; Incline your heart to understanding.",
+                                "C2V3 For if you cry out for insight, And raise your voice for understanding;",
+                                "C2V4 If you seek her as silver And search for her as for hidden treasures;",
+                                "C2V5 Then you will understand the fear of the Lord, And discover the knowledge of God.",
+                                "C2V6 For the Lord gives wisdom; From His mouth come knowledge and understanding.",
+                                "C2V7 He stores up sound wisdom for the upright; He is a shield to those who walk in integrity,",
+                                "C2V8 Guarding the paths of justice, And He watches over the way of His godly ones.",
+                                "C2V9 Then you will discern righteousness, justice, And integrity, and every good path.",
+                                "C2V10 For wisdom will enter your heart, And knowledge will be delightful to your soul;",
+                                "C2V11 Discretion will watch over you, Understanding will guard you,",
+                                "C2V12 To rescue you from the way of evil, From a person who speaks perverse things;",
+                                "C2V13 From those who leave the paths of uprightness To walk in the ways of darkness;",
+                                "C2V14 Who delight in doing evil And rejoice in the perversity of evil;",
+                                "C2V15 Whose paths are crooked, And who are devious in their ways;",
+                                "C2V16 To rescue you from the strange woman, From the foreign woman who flatters with her words,",
+                                "C2V17 Who leaves the companion of her youth And forgets the covenant of her God;",
+                                "C2V18 For her house sinks down to death, And her tracks lead to the dead;",
+                                "C2V19 None who go to her return, Nor do they reach the paths of life.",
+                                "C2V20 So you will walk in the way of good people And keep to the paths of the righteous.",
+                                "C2V21 For the upright will live in the land, And the blameless will remain in it;",
+                                "C2V22 But the wicked will be eliminated from the land, And the treacherous will be torn away from it."
+                            ];
+                            
+                            const chapter3_1Arr = [
+                                "C3V1 My son, do not forget my teaching, But have your heart comply with my commandments;",
+                                "C3V2 For length of days and years of life And peace they will add to you.",
+                                "C3V3 Do not let kindness and truth leave you; Bind them around your neck, Write them on the tablet of your heart.",
+                                "C3V4 So you will find favor and a good reputation In the sight of God and man.",
+                                "C3V5 Trust in the Lord with all your heart And do not lean on your own understanding.",
+                                "C3V6 In all your ways acknowledge Him, And He will make your paths straight.",
+                                "C3V7 Do not be wise in your own eyes; Fear the Lord and turn away from evil.",
+                                "C3V8 It will be healing to your body And refreshment to your bones.",
+                                "C3V9 Honor the Lord from your wealth, And from the first of all your produce;",
+                                "C3V10 Then your barns will be filled with plenty, And your vats will overflow with new wine.",
+                                "C3V11 My son, do not reject the discipline of the Lord Or loathe His rebuke,",
+                                "C3V12 For whom the Lord loves He disciplines, Just as a father disciplines the son in whom he delights."
+                            ];
+							
+                            const chapter3_2Arr = [
+                                "C3V13 Blessed is a person who finds wisdom, And one who obtains understanding.",
+                                "C3V14 For her profit is better than the profit of silver, And her produce better than gold.",
+                                "C3V15 She is more precious than jewels, And nothing you desire compares with her.",
+                                "C3V16 Long life is in her right hand; In her left hand are riches and honor.",
+                                "C3V17 Her ways are pleasant ways, And all her paths are peace.",
+                                "C3V18 She is a tree of life to those who take hold of her, And happy are those who hold on to her.",
+                                "C3V19 The Lord founded the earth by wisdom, He established the heavens by understanding.",
+                                "C3V20 By His knowledge the ocean depths were burst open, And the clouds drip with dew.",
+                                "C3V21 My son, see that they do not escape from your sight; Comply with sound wisdom and discretion,",
+                                "C3V22 And they will be life to your soul And adornment to your neck.",
+                                "C3V23 Then you will walk in your way securely, And your foot will not stumble.",
+                                "C3V24 When you lie down, you will not be afraid; When you lie down, your sleep will be sweet.",
+                                "C3V25 Do not be afraid of sudden danger, Nor of trouble from the wicked when it comes;",
+                                "C3V26 For the Lord will be your confidence, And will keep your foot from being caught."
+                            ];
+							
+                            const chapter3_3Arr = [
+                                "C3V27 Do not withhold good from those to whom it is due, When it is in your power to do it.",
+                                "C3V28 Do not say to your neighbor, _Go, and come back, And tomorrow I will give it to you,_ When you have it with you.",
+                                "C3V29 Do not devise harm against your neighbor, While he lives securely beside you.",
+                                "C3V30 Do not contend with a person for no reason, If he has done you no harm.",
+                                "C3V31 Do not envy a violent person, And do not choose any of his ways.",
+                                "C3V32 For the devious are an abomination to the Lord; But He is intimate with the upright.",
+                                "C3V33 The curse of the Lord is on the house of the wicked, But He blesses the home of the righteous.",
+                                "C3V34 Though He scoffs at the scoffers, Yet He gives grace to the needy.",
+                                "C3V35 The wise will inherit honor, But fools increase dishonor."
+                            ];
+                            
+                            const chapter4_1Arr = [
+                                "C4V1 Listen, my sons, to the instruction of a father, And pay attention so that you may gain understanding,",
+                                "C4V2 For I give you good teaching; Do not abandon my instruction.",
+                                "C4V3 When I was a son to my father, Tender and the only son in the sight of my mother,",
+                                "C4V4 He taught me and said to me, _Let your heart take hold of my words; Keep my commandments and live;",
+                                "C4V5 Acquire wisdom! Acquire understanding! Do not forget nor turn away from the words of my mouth.",
+                                "C4V6 Do not abandon her, and she will guard you; Love her, and she will watch over you.",
+                                "C4V7 The beginning of wisdom is: Acquire wisdom; And with all your possessions, acquire understanding.",
+                                "C4V8 Prize her, and she will exalt you; She will honor you if you embrace her.",
+                                "C4V9 She will place on your head a garland of grace; She will present you with a crown of beauty._"
+                            ];
+							
+                            const chapter4_2Arr = [
+                                "C4V10 Listen, my son, and accept my sayings, And the years of your life will be many.",
+                                "C4V11 I have instructed you in the way of wisdom; I have led you in upright paths.",
+                                "C4V12 When you walk, your steps will not be hampered; And if you run, you will not stumble.",
+                                "C4V13 Take hold of instruction; do not let go. Guard her, for she is your life.",
+                                "C4V14 Do not enter the path of the wicked And do not proceed in the way of evil people.",
+                                "C4V15 Avoid it, do not pass by it; Turn away from it and pass on.",
+                                "C4V16 For they cannot sleep unless they do evil; And they are robbed of sleep unless they make someone stumble.",
+                                "C4V17 For they eat the bread of wickedness, And drink the wine of violence.",
+                                "C4V18 But the path of the righteous is like the light of dawn That shines brighter and brighter until the full day.",
+                                "C4V19 The way of the wicked is like darkness; They do not know over what they stumble."
+                            ];
+							
+                            const chapter4_3Arr = [
+                                "C4V20 My son, pay attention to my words; Incline your ear to my sayings.",
+                                "C4V21 They are not to escape from your sight; Keep them in the midst of your heart.",
+                                "C4V22 For they are life to those who find them, And healing to all their body.",
+                                "C4V23 Watch over your heart with all diligence, For from it flow the springs of life.",
+                                "C4V24 Rid yourself of a deceitful mouth And keep devious speech far from you.",
+                                "C4V25 Let your eyes look directly ahead And let your gaze be fixed straight in front of you.",
+                                "C4V26 Watch the path of your feet, And all your ways will be established.",
+                                "C4V27 Do not turn to the right or to the left; Turn your foot from evil."
+                            ];
+
+                            const chapter5_1Arr = [
+                                "C5V1 My son, pay attention to my wisdom, Incline your ear to my understanding,",
+                                "C5V2 So that you may maintain discretion And your lips may comply with knowledge.",
+                                "C5V3 For the lips of an adulteress drip honey, And her speech is smoother than oil;",
+                                "C5V4 But in the end she is bitter as wormwood, Sharp as a two_edged sword.",
+                                "C5V5 Her feet go down to death, Her steps take hold of Sheol.",
+                                "C5V6 She does not ponder the path of life; Her ways are unstable, she does not know it."
+                            ];
+							
+                            const chapter5_2Arr = [
+                                "C5V7 Now then, my sons, listen to me And do not turn away from the words of my mouth.",
+                                "C5V8 Keep your way far from her, And do not go near the door of her house,",
+                                "C5V9 Otherwise you will give your vigor to others, And your years to the cruel one;",
+                                "C5V10 And strangers will be filled with your strength, And your hard_earned possessions will go to the house of a foreigner;",
+                                "C5V11 And you will groan in the end, When your flesh and your body are consumed;",
+                                "C5V12 And you say, _How I hated instruction! And my heart disdainfully rejected rebuke!",
+                                "C5V13 I did not listen to the voice of my teachers, Nor incline my ear to my instructors!",
+                                "C5V14 I was almost in total ruin In the midst of the assembly and congregation._"                       
+							];
+							
+                            const chapter5_3Arr = [
+                                "C5V15 Drink water from your own cistern, And fresh water from your own well.",
+                                "C5V16 Should your springs overflow into the street, Streams of water in the public squares?",
+                                "C5V17 Let them be yours alone, And not for strangers with you.",
+                                "C5V18 Let your fountain be blessed, And rejoice in the wife of your youth.",
+                                "C5V19 Like a loving doe and a graceful mountain goat, Let her breasts satisfy you at all times; Be exhilarated always with her love.",
+                                "C5V20 For why should you, my son, be exhilarated with an adulteress, And embrace the breasts of a foreigner_",
+                                "C5V21 For the ways of everyone are before the eyes of the Lord, And He observes all his paths.",
+                                "C5V22 His own wrongdoings will trap the wicked, And he will be held by the ropes of his sin.",
+                                "C5V23 He will die for lack of instruction, And in the greatness of his foolishness he will go astray."
+                            ];
+                
+                            const chapter6_1Arr = [
+                                "C6V1 My son, if you have become a guarantor for your neighbor, Or have given a handshake for a stranger,",
+                                "C6V2 If you have been ensnared by the words of your mouth, Or caught by the words of your mouth,",
+                                "C6V3 Then do this, my son, and save yourself: Since you have come into the hand of your neighbor, Go, humble yourself, and be urgent with your neighbor to free yourself.",
+                                "C6V4 Give no sleep to your eyes, Nor slumber to your eyelids;",
+                                "C6V5 Save yourself like a gazelle from the hunter’s hand, And like a bird from the hand of the fowler."
+                            ];
+							
+                            const chapter6_2Arr = [
+                                "C6V6 Go to the ant, you lazy one, Observe its ways and be wise,",
+                                "C6V7 Which, having no chief, Officer, or ruler,",
+                                "C6V8 Prepares its food in the summer And gathers its provision in the harvest.",
+                                "C6V9 How long will you lie down, you lazy one? When will you arise from your sleep?",
+                                "C6V10 _A little sleep, a little slumber, A little folding of the hands to rest,_",
+                                "C6V11 Then your poverty will come in like a drifter, And your need like an armed man."
+                            ];
+							
+                            const chapter6_3Arr = [
+                                "C6V12 A worthless person, a wicked man, Is one who walks with a perverse mouth,",
+                                "C6V13 Who winks with his eyes, who signals with his feet, Who points with his fingers;",
+                                "C6V14 Who, with perversion in his heart, continually devises evil, Who spreads strife.",
+                                "C6V15 Therefore his disaster will come suddenly; Instantly he will be broken and there will be no healing."
+                            ];
+							
+                            const chapter6_4Arr = [
+                                "C6V16 There are six things that the Lord hates, Seven that are an abomination to Him:",
+                                "C6V17 Haughty eyes, a lying tongue, And hands that shed innocent blood,",
+                                "C6V18 A heart that devises wicked plans, Feet that run rapidly to evil,",
+                                "C6V19 A false witness who declares lies, And one who spreads strife among brothers."
+                            ];
+							
+                            const chapter6_5Arr = [
+                                "C6V20 My son, comply with the commandment of your father, And do not ignore the teaching of your mother;",
+                                "C6V21 Bind them continually on your heart; Tie them around your neck.",
+                                "C6V22 When you walk, they will guide you; When you sleep, they will watch over you; And when you awake, they will talk to you.",
+                                "C6V23 For the commandment is a lamp and the teaching is light; And rebukes for discipline are the way of life",
+                                "C6V24 To keep you from the evil woman, From the smooth tongue of the foreign woman.",
+                                "C6V25 Do not desire her beauty in your heart, Nor let her capture you with her eyelids.",
+                                "C6V26 For the price of a prostitute reduces one to a loaf of bread, And an adulteress hunts for a precious life.",
+                                "C6V27 Can anyone take fire in his lap And his clothes not be burned?",
+                                "C6V28 Or can a person walk on hot coals And his feet not be scorched?",
+                                "C6V29 So is the one who goes in to his neighbor’s wife; Whoever touches her will not go unpunished.",
+                                "C6V30 People do not despise a thief if he steals To satisfy himself when he is hungry;",
+                                "C6V31 But when he is found, he must repay seven times as much; He must give up all the property of his house.",
+                                "C6V32 One who commits adultery with a woman is lacking sense; He who would destroy himself commits it.",
+                                "C6V33 He will find wounds and disgrace, And his shame will not be removed.",
+                                "C6V34 For jealousy enrages a man, And he will not have compassion on the day of vengeance.",
+                                "C6V35 He will not accept any settlement, Nor will he be satisfied though you make it a large gift."
+                            ];
+                
+                            const chapter7_1Arr = [
+                                "C7V1 My son, keep my words And treasure my commandments within you.",
+                                "C7V2 Keep my commandments and live, And my teaching as the apple of your eye.",
+                                "C7V3 Bind them on your fingers; Write them on the tablet of your heart.",
+                                "C7V4 Say to wisdom, _You are my sister,_ And call understanding your intimate friend,",
+                                "C7V5 So that they may keep you from an adulteress, From the foreigner who flatters with her words."
+                            ];
+							
+                            const chapter7_2Arr = [
+                                "C7V6 For at the window of my house I looked out through my lattice,",
+                                "C7V7 And I saw among the naive, And discerned among the youths A young man lacking sense,",
+                                "C7V8 Passing through the street near her corner; And he walks along the way to her house,",
+                                "C7V9 In the twilight, in the evening, In the middle of the night and the darkness.",
+                                "C7V10 And behold, a woman comes to meet him, Dressed as a prostitute and cunning of heart.",
+                                "C7V11 She is boisterous and rebellious, Her feet do not remain at home;",
+                                "C7V12 She is now in the streets, now in the public squares, And lurks by every corner.",
+                                "C7V13 So she seizes him and kisses him, And with a brazen face she says to him:",
+                                "C7V14 _I was due to offer peace offerings; Today I have paid my vows.",
+                                "C7V15 Therefore I have come out to meet you, To seek your presence diligently, and I have found you.",
+                                "C7V16 I have spread my couch with coverings, With colored linens of Egypt.",
+                                "C7V17 I have sprinkled my bed With myrrh, aloes, and cinnamon.",
+                                "C7V18 Come, let’s drink our fill of love until morning; Let’s delight ourselves with caresses.",
+                                "C7V19 For my husband is not at home; He has gone on a long journey.",
+                                "C7V20 He has taken a bag of money with him. At the full moon he will come home._",
+                                "C7V21 With her many persuasions she entices him; With her flattering lips she seduces him.",
+                                "C7V22 Suddenly he follows her As an ox goes to the slaughter, Or as one walks in ankle bracelets to the discipline of a fool,",
+                                "C7V23 Until an arrow pierces through his liver; As a bird hurries to the snare, So he does not know that it will cost him his life."
+                            ];
+							
+                            const chapter7_3Arr = [
+                                "C7V24 Now therefore, my sons, listen to me, And pay attention to the words of my mouth.",
+                                "C7V25 Do not let your heart turn aside to her ways, Do not stray into her paths.",
+                                "C7V26 For many are the victims she has brought to ruin, And numerous are all those slaughtered by her.",
+                                "C7V27 Her house is the way to Sheol, Descending to the chambers of death."
+                            ];
+                            
+                            const chapter8_1Arr = [
+                                "C8V1 Does not wisdom call, And understanding raise her voice?",
+                                "C8V2 On top of the heights beside the way, Where the paths meet, she takes her stand;",
+                                "C8V3 Beside the gates, at the opening to the city, At the entrance of the doors, she cries out:",
+                                "C8V4 _To you, people, I call, And my voice is to mankind.",
+                                "C8V5 You naive ones, understand prudence; And, you fools, understand wisdom!",
+                                "C8V6 Listen, for I will speak noble things; And the opening of my lips will reveal right things.",
+                                "C8V7 For my mouth will proclaim truth; And wickedness is an abomination to my lips.",
+                                "C8V8 All the words of my mouth are in righteousness; There is nothing crooked or perverted in them.",
+                                "C8V9 They are all straightforward to him who understands, And right to those who find knowledge.",
+                                "C8V10 Accept my instruction and not silver, And knowledge rather than choice gold.",
+                                "C8V11 For wisdom is better than jewels; And all desirable things cannot compare with her."
+                            ];
+							
+                            const chapter8_2Arr = [
+                                "C8V12 _I, wisdom, dwell with prudence, And I find knowledge and discretion.",
+                                "C8V13 The fear of the Lord is to hate evil; Pride, arrogance, the evil way, And the perverted mouth, I hate.",
+                                "C8V14 Advice is mine and sound wisdom; I am understanding, power is mine.",
+                                "C8V15 By me kings reign, And rulers decree justice.",
+                                "C8V16 By me princes rule, and nobles, All who judge rightly.",
+                                "C8V17 I love those who love me; And those who diligently seek me will find me.",
+                                "C8V18 Riches and honor are with me, Enduring wealth and righteousness.",
+                                "C8V19 My fruit is better than gold, even pure gold; And my yield better than choice silver.",
+                                "C8V20 I walk in the way of righteousness, In the midst of the paths of justice,",
+                                "C8V21 To endow those who love me with wealth, That I may fill their treasuries."
+                            ];
+							
+                            const chapter8_3Arr = [
+                                "C8V22 _The Lord created me at the beginning of His way, Before His works of old.",
+                                "C8V23 From eternity I was established, From the beginning, from the earliest times of the earth.",
+                                "C8V24 When there were no ocean depths, I was born, When there were no springs abounding with water.",
+                                "C8V25 Before the mountains were settled, Before the hills, I was born;",
+                                "C8V26 While He had not yet made the earth and the fields, Nor the first dust of the world.",
+                                "C8V27 When He established the heavens, I was there; When He inscribed a circle on the face of the deep,",
+                                "C8V28 When He made firm the skies above, When the springs of the deep became fixed,",
+                                "C8V29 When He set a boundary for the sea So that the water would not violate His command, When He marked out the foundations of the earth;",
+                                "C8V30 Then I was beside Him, as a master workman; And I was His delight daily, Rejoicing always before Him,",
+                                "C8V31 Rejoicing in the world, His earth, And having my delight in the sons of mankind."
+                            ];
+							
+                            const chapter8_4Arr = [
+                                "C8V32 _Now then, sons, listen to me, For blessed are those who keep my ways.",
+                                "C8V33 Listen to instruction and be wise, And do not neglect it.",
+                                "C8V34 Blessed is the person who listens to me, Watching daily at my gates, Waiting at my doorposts.",
+                                "C8V35 For one who finds me finds life, And obtains favor from the Lord.",
+                                "C8V36 But one who sins against me injures himself; All those who hate me love death._"
+                            ];
+                
+                            const chapter9_1Arr = [
+                                "C9V1 Wisdom has built her house, She has carved out her seven pillars;",
+                                "C9V2 She has prepared her food, she has mixed her wine; She has also set her table;",
+                                "C9V3 She has sent out her attendants, she calls out From the tops of the heights of the city:",
+                                "C9V4 _Whoever is naive, let him turn in here!_ To him who lacks understanding she says,",
+                                "C9V5 _Come, eat of my food And drink of the wine I have mixed.",
+                                "C9V6 Abandon your foolishness and live, And proceed in the way of understanding._"
+                            ];
+							
+                            const chapter9_2Arr = [
+                                "C9V7 One who corrects a scoffer gets dishonor for himself, And one who rebukes a wicked person gets insults for himself.",
+                                "C9V8 Do not rebuke a scoffer, or he will hate you; Rebuke a wise person and he will love you.",
+                                "C9V9 Give instruction to a wise person and he will become still wiser; Teach a righteous person and he will increase his insight.",
+                                "C9V10 The fear of the Lord is the beginning of wisdom, And the knowledge of the Holy One is understanding.",
+                                "C9V11 For by me your days will be multiplied, And years of life will be added to you.",
+                                "C9V12 If you are wise, you are wise for yourself, And if you scoff, you alone will suffer from it."
+                            ];
+							
+                            const chapter9_3Arr = [
+								"C9V13 A woman of foolishness is boisterous, She has a lack of understanding and knows nothing.",
+                                "C9V14 She sits at the doorway of her house, On a seat by the high places of the city,",
+                                "C9V15 Calling to those who pass by, Who are going straight on their paths:",
+                                "C9V16 _Whoever is naive, let him turn in here,_ And to him who lacks understanding she says,",
+                                "C9V17 _Stolen water is sweet; And bread eaten in secret is pleasant._",
+                                "C9V18 But he does not know that the dead are there, That her guests are in the depths of Sheol."
+                            ];
+                
+                            const chapter10Arr = [
+                                "C10V1 A wise son makes a father glad, But a foolish son is a grief to his mother.",
+                                "C10V2 Ill_gotten gains do not benefit, But righteousness rescues from death.",
+                                "C10V3 The Lord will not allow the righteous to hunger, But He will reject the craving of the wicked.",
+                                "C10V4 Poor is one who works with a lazy hand, But the hand of the diligent makes rich.",
+                                "C10V5 He who gathers in summer is a son who acts wisely, But he who sleeps in harvest is a son who acts shamefully.",
+                                "C10V6 Blessings are on the head of the righteous, But the mouth of the wicked conceals violence.",
+                                "C10V7 The mentioning of the righteous is a blessing, But the name of the wicked will rot.",
+                                "C10V8 The wise of heart will receive commands, But a babbling fool will come to ruin.",
+                                "C10V9 One who walks in integrity walks securely, But one who perverts his ways will be found out.",
+                                "C10V10 He who winks the eye causes trouble, And a babbling fool will come to ruin.",
+                                "C10V11 The mouth of the righteous is a fountain of life, But the mouth of the wicked conceals violence.",
+                                "C10V12 Hatred stirs up strife, But love covers all offenses.",
+                                "C10V13 On the lips of the discerning, wisdom is found, But a rod is for the back of him who has no sense.",
+                                "C10V14 Wise people store up knowledge, But with the mouth of the foolish, ruin is at hand.",
+                                "C10V15 The rich person’s wealth is his fortress, The ruin of the poor is their poverty.",
+                                "C10V16 The wages of the righteous is life, The income of the wicked, punishment.",
+                                "C10V17 One who is on the path of life follows instruction, But one who ignores a rebuke goes astray.",
+                                "C10V18 One who conceals hatred has lying lips, And one who spreads slander is a fool.",
+                                "C10V19 When there are many words, wrongdoing is unavoidable, But one who restrains his lips is wise.",
+                                "C10V20 The tongue of the righteous is like choice silver, The heart of the wicked is worth little.",
+                                "C10V21 The lips of the righteous feed many, But fools die for lack of understanding.",
+                                "C10V22 It is the blessing of the Lord that makes rich, And He adds no sorrow to it.",
+                                "C10V23 Doing wickedness is like sport to a fool, And so is wisdom to a person of understanding.",
+                                "C10V24 What the wicked fears will come upon him, But the desire of the righteous will be granted.",
+                                "C10V25 When the whirlwind passes, the wicked is no more, But the righteous has an everlasting foundation.",
+                                "C10V26 Like vinegar to the teeth and smoke to the eyes, So is the lazy one to those who send him.",
+                                "C10V27 The fear of the Lord prolongs life, But the years of the wicked will be shortened.",
+                                "C10V28 The hope of the righteous is gladness, But the expectation of the wicked perishes.",
+                                "C10V29 The way of the Lord is a stronghold for the upright, But ruin to the workers of injustice.",
+                                "C10V30 The righteous will never be shaken, But the wicked will not live in the land.",
+                                "C10V31 The mouth of the righteous flows with wisdom, But the perverted tongue will be cut out.",
+                                "C10V32 The lips of the righteous know what is acceptable, But the mouth of the wicked, what is perverted."
+                            ];
+                
+                            const chapter11Arr = [
+                                "C11V1 A false balance is an abomination to the Lord, But a just weight is His delight.",
+                                "C11V2 When pride comes, then comes dishonor; But with the humble there is wisdom.",
+                                "C11V3 The integrity of the upright will guide them, But the perversity of the treacherous will destroy them.",
+                                "C11V4 Riches do not benefit on the day of wrath, But righteousness rescues from death.",
+                                "C11V5 The righteousness of the blameless will smooth his way, But the wicked will fall by his own wickedness.",
+                                "C11V6 The righteousness of the upright will rescue them, But the treacherous will be caught by their own greed.",
+                                "C11V7 When a wicked person dies, his expectation will perish, And the hope of strong people perishes.",
+                                "C11V8 The righteous is rescued from trouble, But the wicked takes his place.",
+                                "C11V9 With his mouth the godless person destroys his neighbor, But through knowledge the righteous will be rescued.",
+                                "C11V10 When things go well for the righteous, the city rejoices, And when the wicked perish, there is joyful shouting.",
+                                "C11V11 By the blessing of the upright a city is exalted, But by the mouth of the wicked, it is torn down.",
+                                "C11V12 One who despises his neighbor lacks sense, But a person of understanding keeps silent.",
+                                "C11V13 One who goes about as a slanderer reveals secrets, But one who is trustworthy conceals a matter.",
+                                "C11V14 Where there is no guidance the people fall, But in an abundance of counselors there is victory.",
+                                "C11V15 One who is a guarantor for a stranger will certainly suffer for it, But one who hates being a guarantor is secure.",
+                                "C11V16 A gracious woman attains honor, And ruthless men attain riches.",
+                                "C11V17 A merciful person does himself good, But the cruel person does himself harm.",
+                                "C11V18 A wicked person earns deceptive wages, But one who sows righteousness gets a true reward.",
+                                "C11V19 One who is steadfast in righteousness attains life, But one who pursues evil attains his own death.",
+                                "C11V20 The perverse in heart are an abomination to the Lord, But the blameless in their walk are His delight.",
+                                "C11V21 Be assured, the evil person will not go unpunished, But the descendants of the righteous will be rescued.",
+                                "C11V22 As a ring of gold in a pig’s snout So is a beautiful woman who lacks discretion.",
+                                "C11V23 The desire of the righteous is only good, But the expectation of the wicked is wrath.",
+                                "C11V24 There is one who scatters, and yet increases all the more, And there is one who withholds what is justly due, and yet it results only in poverty.",
+                                "C11V25 A generous person will be prosperous, And one who gives others plenty of water will himself be given plenty.",
+                                "C11V26 One who withholds grain, the people will curse him, But blessing will be on the head of him who sells it.",
+                                "C11V27 One who diligently seeks good seeks favor, But one who seeks evil, evil will come to him.",
+                                "C11V28 One who trusts in his riches will fall, But the righteous will flourish like the green leaf.",
+                                "C11V29 One who troubles his own house will inherit wind, And the foolish will be servant to the wise_hearted.",
+                                "C11V30 The fruit of the righteous is a tree of life, And one who is wise gains souls.",
+                                "C11V31 If the righteous will be repaid on the earth, How much more the wicked and the sinner!"
+                            ];
+                            
+                            const chapter12Arr = [
+                                "C12V1 One who loves discipline loves knowledge, But one who hates rebuke is stupid.",
+                                "C12V2 A good person will obtain favor from the Lord, But He will condemn a person who devises evil.",
+                                "C12V3 A person will not be established by wickedness, But the root of the righteous will not be moved.",
+                                "C12V4 An excellent wife is the crown of her husband, But she who shames him is like rottenness in his bones.",
+                                "C12V5 The thoughts of the righteous are just, But the counsels of the wicked are deceitful.",
+                                "C12V6 The words of the wicked wait in ambush for blood, But the mouth of the upright will rescue them.",
+                                "C12V7 The wicked are overthrown and are no more, But the house of the righteous will stand.",
+                                "C12V8 A person will be praised according to his insight, But one of perverse mind will be despised.",
+                                "C12V9 Better is one who is lightly esteemed and has a servant, Than one who honors himself and lacks bread.",
+                                "C12V10 A righteous person has regard for the life of his animal, But even the compassion of the wicked is cruel.",
+                                "C12V11 One who works his land will have plenty of bread, But one who pursues worthless things lacks sense.",
+                                "C12V12 The wicked person desires the plunder of evil people, But the root of the righteous yields fruit.",
+                                "C12V13 An evil person is ensnared by the offense of his lips, But the righteous will escape from trouble.",
+                                "C12V14 A person will be satisfied with good by the fruit of his words, And the deeds of a person’s hands will return to him.",
+                                "C12V15 The way of a fool is right in his own eyes, But a person who listens to advice is wise.",
+                                "C12V16 A fool’s anger is known at once, But a prudent person conceals dishonor.",
+                                "C12V17 One who declares truth tells what is right, But a false witness, deceit.",
+                                "C12V18 There is one who speaks rashly like the thrusts of a sword, But the tongue of the wise brings healing.",
+                                "C12V19 Truthful lips will endure forever, But a lying tongue is only for a moment.",
+                                "C12V20 Deceit is in the heart of those who devise evil, But counselors of peace have joy.",
+                                "C12V21 No harm happens to the righteous, But the wicked are filled with trouble.",
+                                "C12V22 Lying lips are an abomination to the Lord, But those who deal faithfully are His delight.",
+                                "C12V23 A prudent person conceals knowledge, But the heart of fools proclaims foolishness.",
+                                "C12V24 The hand of the diligent will rule, But the lazy hand will be put to forced labor.",
+                                "C12V25 Anxiety in a person’s heart weighs it down, But a good word makes it glad.",
+                                "C12V26 The righteous person is a guide to his neighbor, But the way of the wicked leads them astray.",
+                                "C12V27 A lazy person does not roast his prey, But the precious possession of a person is diligence.",
+                                "C12V28 In the way of righteousness there is life, And in its pathway there is no death."
+                            ];
+                
+                            const chapter13Arr = [
+                                "C13V1 A wise son accepts his father’s discipline, But a scoffer does not listen to rebuke.",
+                                "C13V2 From the fruit of a person’s mouth he enjoys good, But the desire of the treacherous is violence.",
+                                "C13V3 One who guards his mouth protects his life; One who opens wide his lips comes to ruin.",
+                                "C13V4 The soul of the lazy one craves and gets nothing, But the soul of the diligent is made prosperous.",
+                                "C13V5 A righteous person hates a false statement, But a wicked person acts disgustingly and shamefully.",
+                                "C13V6 Righteousness guards the one whose way is blameless, But wickedness brings the sinner to ruin.",
+                                "C13V7 There is one who pretends to be rich but has nothing; Another pretends to be poor, but has great wealth.",
+                                "C13V8 The ransom of a person’s life is his wealth, But the poor hears no rebuke.",
+                                "C13V9 The light of the righteous rejoices, But the lamp of the wicked goes out.",
+                                "C13V10 Through overconfidence comes nothing but strife, But wisdom is with those who receive counsel.",
+                                "C13V11 Wealth obtained from nothing dwindles, But one who gathers by labor increases it.",
+                                "C13V12 Hope deferred makes the heart sick, But desire fulfilled is a tree of life.",
+                                "C13V13 One who despises the word will do badly, But one who fears the commandment will be rewarded.",
+                                "C13V14 The teaching of the wise is a fountain of life, To turn aside from the snares of death.",
+                                "C13V15 Good understanding produces favor, But the way of the treacherous is their own disaster.",
+                                "C13V16 Every prudent person acts with knowledge, But a fool displays foolishness.",
+                                "C13V17 A wicked messenger falls into adversity, But a faithful messenger brings healing.",
+                                "C13V18 Poverty and shame will come to one who neglects discipline, But one who complies with rebuke will be honored.",
+                                "C13V19 Desire realized is sweet to the soul, But it is an abomination to fools to turn away from evil.",
+                                "C13V20 One who walks with wise people will be wise, But a companion of fools will suffer harm.",
+                                "C13V21 Adversity pursues sinners, But the righteous will be rewarded with prosperity.",
+                                "C13V22 A good person leaves an inheritance to his grandchildren, And the wealth of a sinner is stored up for the righteous.",
+                                "C13V23 Abundant food is in the uncultivated ground of the poor, But it is swept away by injustice.",
+                                "C13V24 He who withholds his rod hates his son, But he who loves him disciplines him diligently.",
+                                "C13V25 The righteous has enough to satisfy his appetite, But the stomach of the wicked is in need."
+                            ];
+                            
+                            const chapter14Arr = [
+                                "C14V1 The wise woman builds her house, But the foolish tears it down with her own hands.",
+                                "C14V2 One who walks in his uprightness fears the Lord, But one who is devious in his ways despises Him.",
+                                "C14V3 In the mouth of the foolish is a rod for his back, But the lips of the wise will protect them.",
+                                "C14V4 Where there are no oxen, the manger is clean; But much revenue comes by the strength of the ox.",
+                                "C14V5 A trustworthy witness will not lie, But a false witness declares lies.",
+                                "C14V6 A scoffer seeks wisdom and finds none, But knowledge is easy for one who has understanding.",
+                                "C14V7 Leave the presence of a fool, Or you will not discern words of knowledge.",
+                                "C14V8 The wisdom of the sensible is to understand his way, But the foolishness of fools is deceit.",
+                                "C14V9 Fools mock at sin, But among the upright there is goodwill.",
+                                "C14V10 The heart knows its own bitterness, And a stranger does not share its joy.",
+                                "C14V11 The house of the wicked will be destroyed, But the tent of the upright will flourish.",
+                                "C14V12 There is a way which seems right to a person, But its end is the way of death.",
+                                "C14V13 Even in laughter the heart may be in pain, And the end of joy may be grief.",
+                                "C14V14 One with a wayward heart will have his fill of his own ways, But a good person will be satisfied with his.",
+                                "C14V15 The naive believes everything, But the sensible person considers his steps.",
+                                "C14V16 A wise person is cautious and turns away from evil, But a fool is arrogant and careless.",
+                                "C14V17 A quick_tempered person acts foolishly, And a person of evil devices is hated.",
+                                "C14V18 The naive inherit foolishness, But the sensible are crowned with knowledge.",
+                                "C14V19 The evil will bow down before the good, And the wicked at the gates of the righteous.",
+                                "C14V20 The poor is hated even by his neighbor, But those who love the rich are many.",
+                                "C14V21 One who despises his neighbor sins, But one who is gracious to the poor is blessed.",
+                                "C14V22 Will they who devise evil not go astray? But kindness and truth will be to those who devise good.",
+                                "C14V23 In all labor there is profit, But mere talk leads only to poverty.",
+                                "C14V24 The crown of the wise is their riches, But the foolishness of fools is simply foolishness.",
+                                "C14V25 A truthful witness saves lives, But one who declares lies is deceitful.",
+                                "C14V26 In the fear of the Lord there is strong confidence, And his children will have refuge.",
+                                "C14V27 The fear of the Lord is a fountain of life, By which one may avoid the snares of death.",
+                                "C14V28 In a multitude of people is a king’s glory, But in the scarcity of people is a prince’s ruin.",
+                                "C14V29 One who is slow to anger has great understanding; But one who is quick_tempered exalts foolishness.",
+                                "C14V30 A tranquil heart is life to the body, But jealousy is rottenness to the bones.",
+                                "C14V31 One who oppresses the poor taunts his Maker, But one who is gracious to the needy honors Him.",
+                                "C14V32 The wicked is thrust down by his own wrongdoing, But the righteous has a refuge when he dies.",
+                                "C14V33 Wisdom rests in the heart of one who has understanding, But among fools it is made known.",
+                                "C14V34 Righteousness exalts a nation, But sin is a disgrace to any people.",
+                                "C14V35 The king’s favor is toward a servant who acts wisely, But his anger is toward him who acts shamefully."
+                            ];
+                            
+                            const chapter15Arr = [
+                                "C15V1 A gentle answer turns away wrath, But a harsh word stirs up anger.",
+                                "C15V2 The tongue of the wise makes knowledge pleasant, But the mouth of fools spouts foolishness.",
+                                "C15V3 The eyes of the Lord are in every place, Watching the evil and the good.",
+                                "C15V4 A soothing tongue is a tree of life, But perversion in it crushes the spirit.",
+                                "C15V5 A fool rejects his father’s discipline, But he who complies with rebuke is sensible.",
+                                "C15V6 Great wealth is in the house of the righteous, But trouble is in the income of the wicked.",
+                                "C15V7 The lips of the wise spread knowledge, But the hearts of fools are not so.",
+                                "C15V8 The sacrifice of the wicked is an abomination to the Lord, But the prayer of the upright is His delight.",
+                                "C15V9 The way of the wicked is an abomination to the Lord, But He loves the one who pursues righteousness.",
+                                "C15V10 There is severe punishment for one who abandons the way; One who hates a rebuke will die.",
+                                "C15V11 Sheol and Abaddon lie open before the Lord, How much more the hearts of mankind!",
+                                "C15V12 A scoffer does not love one who rebukes him; He will not go to the wise.",
+                                "C15V13 A joyful heart makes a cheerful face, But when the heart is sad, the spirit is broken.",
+                                "C15V14 The mind of the intelligent seeks knowledge, But the mouth of fools feeds on foolishness.",
+                                "C15V15 All the days of the needy are bad, But a cheerful heart has a continual feast.",
+                                "C15V16 Better is a little with the fear of the Lord Than great treasure, and turmoil with the treasure.",
+                                "C15V17 Better is a portion of vegetables where there is love, Than a fattened ox served with hatred.",
+                                "C15V18 A hot_tempered person stirs up strife, But the slow to anger calms a dispute.",
+                                "C15V19 The way of the lazy one is like a hedge of thorns, But the path of the upright is a highway.",
+                                "C15V20 A wise son makes a father glad, But a foolish man despises his mother.",
+                                "C15V21 Foolishness is joy to one who lacks sense, But a person of understanding walks straight.",
+                                "C15V22 Without consultation, plans are frustrated, But with many counselors they succeed.",
+                                "C15V23 A person has joy in an apt answer, And how delightful is a timely word!",
+                                "C15V24 The path of life leads upward for the wise, So that he may keep away from Sheol below.",
+                                "C15V25 The Lord will tear down the house of the proud, But He will set the boundary of the widow.",
+                                "C15V26 Evil plans are an abomination to the Lord, But pleasant words are pure.",
+                                "C15V27 He who profits illicitly troubles his own house, But he who hates bribes will live.",
+                                "C15V28 The heart of the righteous ponders how to answer, But the mouth of the wicked pours out evil things.",
+                                "C15V29 The Lord is far from the wicked, But He hears the prayer of the righteous.",
+                                "C15V30 Bright eyes gladden the heart; Good news refreshes the bones.",
+                                "C15V31 One whose ear listens to a life_giving rebuke Will stay among the wise.",
+                                "C15V32 One who neglects discipline rejects himself, But one who listens to a rebuke acquires understanding.",
+                                "C15V33 The fear of the Lord is the instruction for wisdom, And before honor comes humility."
+                            ];
+                            
+                
+                
+                            const chapter16Arr = [
+                                "C16V1 The plans of the heart belong to a person, But the answer of the tongue is from the Lord.",
+                                "C16V2 All the ways of a person are clean in his own sight, But the Lord examines the motives.",
+                                "C16V3 Commit your works to the Lord, And your plans will be established.",
+                                "C16V4 The Lord has made everything for its own purpose, Even the wicked for the day of evil.",
+                                "C16V5 Everyone who is proud in heart is an abomination to the Lord; Be assured, he will not go unpunished.",
+                                "C16V6 By mercy and truth atonement is made for wrongdoing, And by the fear of the Lord one keeps away from evil.",
+                                "C16V7 When a person’s ways are pleasing to the Lord, He causes even his enemies to make peace with him.",
+                                "C16V8 Better is a little with righteousness Than great income with injustice.",
+                                "C16V9 The mind of a person plans his way, But the Lord directs his steps.",
+                                "C16V10 A divine verdict is on the lips of the king; His mouth should not err in judgment.",
+                                "C16V11 A just balance and scales belong to the Lord; All the weights of the bag are His concern.",
+                                "C16V12 It is an abomination for kings to commit wicked acts, Because a throne is established on righteousness.",
+                                "C16V13 Righteous lips are the delight of kings, And one who speaks right is loved.",
+                                "C16V14 The fury of a king is like messengers of death; But a wise person will appease it.",
+                                "C16V15 In the light of a king’s face is life, And his favor is like a cloud with the spring rain.",
+                                "C16V16 How much better it is to get wisdom than gold! And to get understanding is to be chosen above silver.",
+                                "C16V17 The highway of the upright is to turn away from evil; One who watches his way protects his life.",
+                                "C16V18 Pride goes before destruction, And a haughty spirit before stumbling.",
+                                "C16V19 It is better to be humble in spirit with the needy Than to divide the spoils with the proud.",
+                                "C16V20 One who pays attention to the word will find good, And blessed is one who trusts in the Lord.",
+                                "C16V21 The wise in heart will be called understanding, And sweetness of speech increases persuasiveness.",
+                                "C16V22 Understanding is a fountain of life to those who have it, But the discipline of fools is foolishness.",
+                                "C16V23 The heart of the wise instructs his mouth And adds persuasiveness to his lips.",
+                                "C16V24 Pleasant words are a honeycomb, Sweet to the soul and healing to the bones.",
+                                "C16V25 There is a way which seems right to a person, But its end is the way of death.",
+                                "C16V26 A worker’s appetite works for him, For his hunger urges him on.",
+                                "C16V27 A worthless person digs up evil, While his words are like scorching fire.",
+                                "C16V28 A perverse person spreads strife, And a slanderer separates close friends.",
+                                "C16V29 A person of violence entices his neighbor And leads him in a way that is not good.",
+                                "C16V30 He who winks his eyes does so to devise perverse things; He who compresses his lips brings evil to pass.",
+                                "C16V31 A gray head is a crown of glory; It is found in the way of righteousness.",
+                                "C16V32 One who is slow to anger is better than the mighty, And one who rules his spirit, than one who captures a city.",
+                                "C16V33 The lot is cast into the lap, But its every decision is from the Lord."
+                            ];
+                
+                            const chapter17Arr = [
+                                "C17V1 Better is a dry morsel and quietness with it Than a house full of feasting with strife.",
+                                "C17V2 A servant who acts wisely will rule over a son who acts shamefully, And will share in the inheritance among brothers.",
+                                "C17V3 The refining pot is for silver and the furnace for gold, But the Lord tests hearts.",
+                                "C17V4 An evildoer listens to wicked lips; A liar pays attention to a destructive tongue.",
+                                "C17V5 One who mocks the poor taunts his Maker; One who rejoices at disaster will not go unpunished.",
+                                "C17V6 Grandchildren are the crown of the old, And the glory of sons is their fathers.",
+                                "C17V7 Excellent speech is not fitting for a fool, Much less are lying lips to a prince.",
+                                "C17V8 A bribe is a charm in the sight of its owner; Wherever he turns, he prospers.",
+                                "C17V9 One who conceals an offense seeks love, But one who repeats a matter separates close friends.",
+                                "C17V10 A rebuke goes deeper into one who has understanding Than a hundred blows into a fool.",
+                                "C17V11 A rebellious person seeks only evil, So a cruel messenger will be sent against him.",
+                                "C17V12 Let a person meet a bear robbed of her cubs, Rather than a fool in his foolishness.",
+                                "C17V13 One who returns evil for good, Evil will not depart from his house.",
+                                "C17V14 The beginning of strife is like letting out water, So abandon the quarrel before it breaks out.",
+                                "C17V15 One who justifies the wicked and one who condemns the righteous, Both of them alike are an abomination to the Lord.",
+                                "C17V16 Why is there money in the hand of a fool to buy wisdom, When he has no sense?",
+                                "C17V17 A friend loves at all times, And a brother is born for adversity.",
+                                "C17V18 A person lacking in sense shakes hands And becomes guarantor in the presence of his neighbor.",
+                                "C17V19 One who loves wrongdoing loves strife; One who makes his doorway high seeks destruction.",
+                                "C17V20 One who has a crooked mind finds nothing good, And one who is corrupted in his language falls into evil.",
+                                "C17V21 He who fathers a fool does so to his sorrow, And the father of a fool has no joy.",
+                                "C17V22 A joyful heart is good medicine, But a broken spirit dries up the bones.",
+                                "C17V23 A wicked person accepts a bribe from an inside pocket To pervert the ways of justice.",
+                                "C17V24 Wisdom is in the presence of one who has understanding, But the eyes of a fool are on the ends of the earth.",
+                                "C17V25 A foolish son is a grief to his father, And bitterness to her who gave birth to him.",
+                                "C17V26 It is also not good to fine the righteous, Nor to strike the noble for their uprightness.",
+                                "C17V27 One who withholds his words has knowledge, And one who has a cool spirit is a person of understanding.",
+                                "C17V28 Even a fool, when he keeps silent, is considered wise; When he closes his lips, he is considered prudent."
+                            ];
+                
+                            const chapter18Arr = [
+                                "C18V1 One who separates himself seeks his own desire; He quarrels against all sound wisdom.",
+                                "C18V2 A fool does not delight in understanding, But in revealing his own mind.",
+                                "C18V3 When a wicked person comes, contempt also comes, And with dishonor comes taunting.",
+                                "C18V4 The words of a person’s mouth are deep waters; The fountain of wisdom is a bubbling brook.",
+                                "C18V5 To show partiality to the wicked is not good, Nor to suppress the righteous in judgment.",
+                                "C18V6 A fool’s lips bring strife, And his mouth invites beatings.",
+                                "C18V7 A fool’s mouth is his ruin, And his lips are the snare of his soul.",
+                                "C18V8 The words of a gossiper are like dainty morsels, And they go down into the innermost parts of the body.",
+                                "C18V9 He also who is lax in his work Is a brother to him who destroys.",
+                                "C18V10 The name of the Lord is a strong tower; The righteous runs into it and is safe.",
+                                "C18V11 A rich person’s wealth is his strong city, And like a high wall in his own imagination.",
+                                "C18V12 Before destruction the heart of a person is haughty, But humility goes before honor.",
+                                "C18V13 One who gives an answer before he hears, It is foolishness and shame to him.",
+                                "C18V14 The spirit of a person can endure his sickness, But as for a broken spirit, who can endure it?",
+                                "C18V15 The mind of the discerning acquires knowledge, And the ear of the wise seeks knowledge.",
+                                "C18V16 A person’s gift makes room for him And brings him before great people.",
+                                "C18V17 The first to plead his case seems right, Until another comes and examines him.",
+                                "C18V18 The cast lot puts an end to quarrels, And decides between the mighty ones.",
+                                "C18V19 A brother who is offended is harder to be won than a strong city, And quarrels are like the bars of a citadel.",
+                                "C18V20 With the fruit of a person’s mouth his stomach will be satisfied; He will be satisfied with the product of his lips.",
+                                "C18V21 Death and life are in the power of the tongue, And those who love it will eat its fruit.",
+                                "C18V22 He who finds a wife finds a good thing And obtains favor from the Lord.",
+                                "C18V23 A poor person utters pleadings, But a rich person answers defiantly.",
+                                "C18V24 A person of too many friends comes to ruin, But there is a friend who sticks closer than a brother."
+                            ];
+                
+                            const chapter19Arr = [
+                                "C19V1 Better is a poor person who walks in his integrity Than a person who is perverse in speech and is a fool.",
+                                "C19V2 Also it is not good for a person to be without knowledge, And one who hurries his footsteps errs.",
+                                "C19V3 The foolishness of a person ruins his way, And his heart rages against the Lord.",
+                                "C19V4 Wealth adds many friends, But a poor person is separated from his friend.",
+                                "C19V5 A false witness will not go unpunished, And one who declares lies will not escape.",
+                                "C19V6 Many will seek the favor of a generous person, And every person is a friend to him who gives gifts.",
+                                "C19V7 All the brothers of a poor person hate him; How much more do his friends abandon him! He pursues them with words, but they are gone.",
+                                "C19V8 One who gets wisdom loves his own soul; One who keeps understanding will find good.",
+                                "C19V9 A false witness will not go unpunished, And one who declares lies will perish.",
+                                "C19V10 Luxury is not fitting for a fool; Much less for a slave to rule over princes.",
+                                "C19V11 A person’s discretion makes him slow to anger, And it is his glory to overlook an offense.",
+                                "C19V12 A king’s wrath is like the roaring of a lion, But his favor is like dew on the grass.",
+                                "C19V13 A foolish son is destruction to his father, And the quarrels of a wife are a constant dripping.",
+                                "C19V14 House and wealth are an inheritance from fathers, But a prudent wife is from the Lord.",
+                                "C19V15 Laziness casts one into a deep sleep, And a lazy person will suffer hunger.",
+                                "C19V16 One who keeps the commandment keeps his soul, But one who is careless of conduct will die.",
+                                "C19V17 One who is gracious to a poor person lends to the Lord, And He will repay him for his good deed.",
+                                "C19V18 Discipline your son while there is hope, And do not desire his death.",
+                                "C19V19 A person of great anger will suffer the penalty, For if you rescue him, you will only have to do it again.",
+                                "C19V20 Listen to advice and accept discipline, So that you may be wise the rest of your days.",
+                                "C19V21 Many plans are in a person’s heart, But the advice of the Lord will stand.",
+                                "C19V22 What is desirable in a person is his kindness, And it is better to be a poor person than a liar.",
+                                "C19V23 The fear of the Lord leads to life, So that one may sleep satisfied, untouched by evil.",
+                                "C19V24 The lazy one buries his hand in the dish, But will not even bring it back to his mouth.",
+                                "C19V25 Strike a scoffer and the naive may become clever, But rebuke one who has understanding, and he will gain knowledge.",
+                                "C19V26 He who assaults his father and drives his mother away Is a shameful and disgraceful son.",
+                                "C19V27 Stop listening, my son, to discipline, And you will stray from the words of knowledge.",
+                                "C19V28 A worthless witness makes a mockery of justice, And the mouth of the wicked swallows wrongdoing.",
+                                "C19V29 Judgments are prepared for scoffers, And beatings for the backs of fools."
+                            ];
+                
+                            const chapter20Arr = [
+                                "C20V1 Wine is a mocker, intoxicating drink a brawler, And whoever is intoxicated by it is not wise.",
+                                "C20V2 The terror of a king is like the roaring of a lion; One who provokes him to anger forfeits his own life.",
+                                "C20V3 Avoiding strife is an honor for a person, But any fool will quarrel.",
+                                "C20V4 The lazy one does not plow after the autumn, So he begs during the harvest and has nothing.",
+                                "C20V5 A plan in the heart of a person is like deep water, But a person of understanding draws it out.",
+                                "C20V6 Many a person proclaims his own loyalty, But who can find a trustworthy person?",
+                                "C20V7 A righteous person who walks in his integrity— How blessed are his sons after him.",
+                                "C20V8 A king who sits on the throne of justice Disperses all evil with his eyes.",
+                                "C20V9 Who can say, _I have cleansed my heart, I am pure from my sin_?",
+                                "C20V10 Differing weights and differing measures, Both of them are abominable to the Lord.",
+                                "C20V11 It is by his deeds that a boy distinguishes himself, If his conduct is pure and right.",
+                                "C20V12 The hearing ear and the seeing eye, The Lord has made both of them.",
+                                "C20V13 Do not love sleep, or you will become poor; Open your eyes, and you will be satisfied with food.",
+                                "C20V14 _Bad, bad,_ says the buyer, But when he goes his way, then he boasts.",
+                                "C20V15 There is gold, and an abundance of jewels; But lips of knowledge are a more precious thing.",
+                                "C20V16 Take his garment when he becomes guarantor for a stranger; And for foreigners, seize a pledge from him.",
+                                "C20V17 Bread obtained by a lie is sweet to a person, But afterward his mouth will be filled with gravel.",
+                                "C20V18 Prepare plans by consultation, And make war by wise guidance.",
+                                "C20V19 One who goes about as a slanderer reveals secrets; Therefore do not associate with a gossip.",
+                                "C20V20 He who curses his father or his mother, His lamp will go out in time of darkness.",
+                                "C20V21 An inheritance gained in a hurry at the beginning Will not be blessed in the end.",
+                                "C20V22 Do not say, _I will repay evil_; Wait for the Lord, and He will save you.",
+                                "C20V23 Differing weights are an abomination to the Lord, And a false scale is not good.",
+                                "C20V24 A man’s steps are ordained by the Lord; How then can a person understand his way?",
+                                "C20V25 It is a trap for a person to say carelessly, _It is holy!_ And after the vows to make inquiry.",
+                                "C20V26 A wise king scatters the wicked, And drives a threshing wheel over them.",
+                                "C20V27 The spirit of a person is the lamp of the Lord, Searching all the innermost parts of his being.",
+                                "C20V28 Loyalty and truth watch over the king, And he upholds his throne by loyalty.",
+                                "C20V29 The glory of young men is their strength, And the honor of old men is their gray hair.",
+                                "C20V30 Bruising wounds clean away evil, And blows cleanse the innermost parts."
+                            ];
+                
+                            const chapter21Arr = [
+                                "C21V1 The king’s heart is like channels of water in the hand of the Lord; He turns it wherever He pleases.",
+                                "C21V2 Every person’s way is right in his own eyes, But the Lord examines the hearts.",
+                                "C21V3 To do righteousness and justice Is preferred by the Lord more than sacrifice.",
+                                "C21V4 Haughty eyes and a proud heart, The lamp of the wicked, is sin.",
+                                "C21V5 The plans of the diligent certainly lead to advantage, But everyone who is in a hurry certainly comes to poverty.",
+                                "C21V6 The acquisition of treasures by a lying tongue Is a fleeting vapor, the pursuit of death.",
+                                "C21V7 The violence of the wicked will sweep them away, Because they refuse to act with justice.",
+                                "C21V8 The way of a guilty person is crooked, But as for the pure, his conduct is upright.",
+                                "C21V9 It is better to live on a corner of a roof Than in a house shared with a contentious woman.",
+                                "C21V10 The soul of the wicked desires evil; His neighbor is shown no compassion in his eyes.",
+                                "C21V11 When the scoffer is punished, the naive becomes wise; But when the wise is instructed, he receives knowledge.",
+                                "C21V12 The righteous one considers the house of the wicked, Bringing the wicked to ruin.",
+                                "C21V13 One who shuts his ear to the outcry of the poor Will also call out himself, and not be answered.",
+                                "C21V14 A gift in secret subdues anger, And a bribe in an inside pocket, strong wrath.",
+                                "C21V15 The exercise of justice is joy for the righteous, But terror to those who practice injustice.",
+                                "C21V16 A person who wanders from the way of understanding Will rest in the assembly of the dead.",
+                                "C21V17 One who loves pleasure will become a poor person; One who loves wine and oil will not become rich.",
+                                "C21V18 The wicked is a ransom for the righteous, And the treacherous is in the place of the upright.",
+                                "C21V19 It is better to live in a desert land Than with a contentious and irritating woman.",
+                                "C21V20 There is precious treasure and oil in the home of the wise, But a foolish person swallows it up.",
+                                "C21V21 One who pursues righteousness and loyalty Finds life, righteousness, and honor.",
+                                "C21V22 A wise person scales the city of the mighty And brings down the stronghold in which they trust.",
+                                "C21V23 One who guards his mouth and his tongue, Guards his soul from troubles.",
+                                "C21V24 _Proud,_ _Arrogant,_ _Scoffer,_ are his names, One who acts with insolent pride.",
+                                "C21V25 The desire of the lazy one puts him to death, For his hands refuse to work;",
+                                "C21V26 All day long he is craving, While the righteous gives and does not hold back.",
+                                "C21V27 The sacrifice of the wicked is an abomination, How much more when he brings it with evil intent!",
+                                "C21V28 A false witness will perish, But a person who listens will speak forever.",
+                                "C21V29 A wicked person displays a bold face, But as for the upright, he makes his way sure.",
+                                "C21V30 There is no wisdom, no understanding, And no plan against the Lord.",
+                                "C21V31 The horse is prepared for the day of battle, But the victory belongs to the Lord."
+                            ];
+                			
+                            const chapter22_1Arr = [
+                                "C22V1 A good name is to be more desired than great wealth; Favor is better than silver and gold.",
+                                "C22V2 The rich and the poor have a common bond, The Lord is the Maker of them all.",
+                                "C22V3 A prudent person sees evil and hides himself, But the naive proceed, and pay the penalty.",
+                                "C22V4 The reward of humility and the fear of the Lord Are riches, honor, and life.",
+                                "C22V5 Thorns and snares are in the way of the perverse; One who guards himself will be far from them.",
+                                "C22V6 Train up a child in the way he should go, Even when he grows older he will not abandon it.",
+                                "C22V7 The rich rules over the poor, And the borrower becomes the lender’s slave.",
+                                "C22V8 One who sows injustice will reap disaster, And the rod of his fury will perish.",
+                                "C22V9 One who is generous will be blessed, Because he gives some of his food to the poor.",
+                                "C22V10 Drive out the scoffer, and strife will leave, Even quarreling and dishonor will cease.",
+                                "C22V11 One who loves purity of heart And whose speech is gracious, the king is his friend.",
+                                "C22V12 The eyes of the Lord protect knowledge, But He overthrows the words of the treacherous person.",
+                                "C22V13 The lazy one says, _There is a lion outside; I will be killed in the streets!_",
+                                "C22V14 The mouth of an adulteress is a deep pit; He who is cursed of the Lord will fall into it.",
+                                "C22V15 Foolishness is bound up in the heart of a child; The rod of discipline will remove it far from him.",
+                                "C22V16 One who oppresses the poor to make more for himself, Or gives to the rich, will only come to poverty."
+							];
+							
+                            const chapter22_2Arr = [
+                                "C22V17 Extend your ear and hear the words of the wise, And apply your mind to my knowledge;",
+                                "C22V18 For it will be pleasant if you keep them within you, So that they may be ready on your lips.",
+                                "C22V19 So that your trust may be in the Lord, I have taught you today, you indeed.",
+                                "C22V20 Have I not written to you excellent things Of counsels and knowledge,",
+                                "C22V21 To make you know the certainty of the words of truth, So that you may correctly answer him who sent you?"
+							];
+							
+                            const chapter22_3Arr = [
+                                "C22V22 Do not rob the poor because he is poor, Nor crush the needy at the gate;",
+                                "C22V23 For the Lord will plead their case And take the life of those who rob them."
+							];
+							
+                            const chapter22_4Arr = [
+                                "C22V24 Do not make friends with a person given to anger, Or go with a hot_tempered person,",
+                                "C22V25 Or you will learn his ways And find a snare for yourself."
+							];
+							
+                            const chapter22_5Arr = [
+                                "C22V26 Do not be among those who shake hands, Among those who become guarantors for debts.",
+                                "C22V27 If you have nothing with which to repay, Why should he take your bed from under you?"
+							];
+							
+                            const chapter22_6Arr = [
+                                "C22V28 Do not move the ancient boundary Which your fathers have set."
+							];
+							
+                            const chapter22_7Arr = [
+								"C22V29 Do you see a person skilled in his work? He will stand before kings; He will not stand before obscure people."
+							];
+                
+                            const chapter23_1Arr = [
+                                "C23V1 When you sit down to dine with a ruler, Consider carefully what is before you,",
+                                "C23V2 And put a knife to your throat If you are a person of great appetite.",
+                                "C23V3 Do not desire his delicacies, For it is deceptive food."
+							];
+                            const chapter23_2Arr = [
+                                "C23V4 Do not weary yourself to gain wealth; Stop dwelling on it.",
+                                "C23V5 When you set your eyes on it, it is gone. For wealth certainly makes itself wings Like an eagle that flies toward the heavens."
+							];
+                            const chapter23_3Arr = [
+                                "C23V6 Do not eat the bread of a selfish person; Or desire his delicacies;",
+                                "C23V7 For as he thinks within himself, so he is. He says to you, _Eat and drink!_ But his heart is not with you.",
+                                "C23V8 You will vomit up the morsel you have eaten And waste your compliments.",
+                                "C23V9 Do not speak to be heard by a fool, For he will despise the wisdom of your words."
+							];
+							
+                            const chapter23_4Arr = [
+                                "C23V10 Do not move the ancient boundary Or go into the fields of the fatherless,",
+                                "C23V11 For their Redeemer is strong; He will plead their case against you.",
+                                "C23V12 Apply your heart to discipline, And your ears to words of knowledge."
+							];
+                            const chapter23_5Arr = [
+                                "C23V13 Do not withhold discipline from a child; Though you strike him with the rod, he will not die.",
+                                "C23V14 You shall strike him with the rod And rescue his soul from Sheol."
+							];
+                            const chapter23_6Arr = [
+                                "C23V15 My son, if your heart is wise, My own heart also will be glad,",
+                                "C23V16 And my innermost being will rejoice When your lips speak what is right."
+							];
+                            const chapter23_7Arr = [
+                                "C23V17 Do not let your heart envy sinners, But live in the fear of the Lord always.",
+                                "C23V18 Certainly there is a future, And your hope will not be cut off.",
+                                "C23V19 Listen, my son, and be wise, And direct your heart in the way.",
+                                "C23V20 Do not be with heavy drinkers of wine, Or with gluttonous eaters of meat;",
+                                "C23V21 For the heavy drinker and the glutton will come to poverty, And drowsiness will clothe one with rags."
+							];
+                            const chapter23_8Arr = [
+                                "C23V22 Listen to your father, who fathered you, And do not despise your mother when she is old.",
+                                "C23V23 Buy truth, and do not sell it, Get wisdom, instruction, and understanding."
+							];
+                            const chapter23_9Arr = [
+                                "C23V24 The father of the righteous will greatly rejoice, And he who fathers a wise son will be glad in him.",
+                                "C23V25 Let your father and your mother be glad, And let her rejoice who gave birth to you."
+							];
+                            const chapter23_10Arr = [
+                                "C23V26 Give me your heart, my son, And let your eyes delight in my ways.",
+                                "C23V27 For a prostitute is a deep pit, And a strange woman is a narrow well.",
+                                "C23V28 Certainly she lurks as a robber, And increases the treacherous among mankind."
+							];
+                            const chapter23_11Arr = [
+                                "C23V29 Who has woe? Who has sorrow? Who has contentions? Who has complaining? Who has wounds without cause? Who has red eyes?",
+                                "C23V30 Those who linger long over wine, Those who go to taste mixed wine.",
+                                "C23V31 Do not look at wine when it is red, When it sparkles in the cup, When it goes down smoothly;",
+                                "C23V32 In the end it bites like a snake And stings like a viper.",
+                                "C23V33 Your eyes will see strange things And your mind will say perverse things.",
+                                "C23V34 And you will be like one who lies down in the middle of the sea, Or like one who lies down on the top of a mast.",
+                                "C23V35 _They struck me, but I did not become ill; They beat me, but I did not know it. When will I awake? I will seek another drink._"
+							];
+                
+                            const chapter24_1Arr = [
+                              "C24V1 Do not be envious of evil people, Nor desire to be with them;",
+                               "C24V2 For their minds plot violence, And their lips talk of trouble."
+							];
+							
+                            const chapter24_2Arr = [
+                                "C24V3 By wisdom a house is built, And by understanding it is established;",
+                                "C24V4 And by knowledge the rooms are filled With all precious and pleasant riches."
+							];
+							
+                            const chapter24_3Arr = [
+                                "C24V5 A wise man is strong, And a person of knowledge increases power.",
+                                "C24V6 For by wise guidance you will wage war, And in an abundance of counselors there is victory."
+							];
+							
+                            const chapter24_4Arr = [
+                                "C24V7 Wisdom is too exalted for a fool, He does not open his mouth at the gate."
+							];
+							
+                            const chapter24_5Arr = [
+                                "C24V8 One who plans to do evil, People will call a schemer.",
+                                "C24V9 The devising of foolishness is sin, And the scoffer is an abomination to humanity."
+							];
+							
+                            const chapter24_6Arr = [
+                                "C24V10 If you show yourself lacking courage on the day of distress, Your strength is meager."
+							];
+							
+                            const chapter24_7Arr = [
+                                "C24V11 Rescue those who are being taken away to death, And those who are staggering to the slaughter, Oh hold them back!",
+                                "C24V12 If you say, _See, we did not know this,_ Does He who weighs the hearts not consider it? And does He who watches over your soul not know it? And will He not repay a person according to his work?"
+							];
+							
+                            const chapter24_8Arr = [
+                                "C24V13 My son, eat honey, for it is good; Yes, the honey from the comb is sweet to your taste;",
+                                "C24V14 Know that wisdom is the same for your soul; If you find it, then there will be a future, And your hope will not be cut off.",
+                                "C24V15 Do not lie in ambush, you wicked person, against the home of the righteous; Do not destroy his resting place;",
+                                "C24V16 For a righteous person falls seven times and rises again, But the wicked stumble in time of disaster.",
+                                "C24V17 Do not rejoice when your enemy falls, And do not let your heart rejoice when he stumbles,",
+                                "C24V18 Otherwise, the Lord will see and be displeased, And turn His anger away from him."					
+							];
+							
+                            const chapter24_9Arr = [
+                                "C24V19 Do not get upset because of evildoers Or be envious of the wicked;",
+                                "C24V20 For there will be no future for the evil person; The lamp of the wicked will be put out."							
+							];
+							
+                            const chapter24_10Arr = [
+                                "C24V21 My son, fear the Lord and the king; Do not get involved with those of high rank,",
+                                "C24V22 For their disaster will rise suddenly, And who knows the ruin that can come from both of them?"							
+							];
+							
+                            const chapter24_11Arr = [
+                                "C24V23 These also are sayings of the wise: To show partiality in judgment is not good.",
+                                "C24V24 One who says to the wicked, _You are righteous,_ Peoples will curse him, nations will scold him;",
+                                "C24V25 But for those who rebuke the wicked there will be delight, And a good blessing will come upon them.",
+                                "C24V26 One who gives a right answer Kisses the lips."							
+							];
+							
+                            const chapter24_12Arr = [
+                                "C24V27 Prepare your work outside, And make it ready for yourself in the field; Afterward, then, build your house."
+							];
+							
+                            const chapter24_13Arr = [
+                                "C24V28 Do not be a witness against your neighbor for no reason, And do not deceive with your lips.",
+                                "C24V29 Do not say, _I shall do the same to him as he has done to me; I will repay the person according to his work._"
+							];
+							
+                            const chapter24_14Arr = [
+                                "C24V30 I passed by the field of a lazy one, And by the vineyard of a person lacking sense,",
+                                "C24V31 And behold, it was completely overgrown with weeds; Its surface was covered with weeds, And its stone wall was broken down.",
+                                "C24V32 When I saw, I reflected upon it; I looked, and received instruction.",
+                                "C24V33 _A little sleep, a little slumber, A little folding of the hands to rest,_",
+                                "C24V34 Then your poverty will come like a drifter, And your need like an armed man."
+							];
+                
+                            const chapter25_1Arr = [
+                                "C25V1 These also are proverbs of Solomon which the men of Hezekiah, king of Judah, transcribed.",
+                                "C25V2 It is the glory of God to conceal a matter, But the glory of kings is to search out a matter.",
+                                "C25V3 As the heavens for height and the earth for depth, So the heart of kings is unsearchable.",
+                                "C25V4 Take away the impurities from the silver, And there comes out a vessel for the smith;",
+                                "C25V5 Take away the wicked before the king, And his throne will be established in righteousness.",
+                                "C25V6 Do not boast in the presence of the king, And do not stand in the same place as great people;",
+                                "C25V7 For it is better that it be said to you, _Come up here,_ Than for you to be placed lower in the presence of the prince, Whom your eyes have seen."							
+							];
+							
+                            const chapter25_2Arr = [
+                                "C25V8 Do not go out hastily to argue your case; Otherwise, what will you do in the end, When your neighbor humiliates you?",
+                                "C25V9 Argue your case with your neighbor, And do not reveal the secret of another,",
+                                "C25V10 Or one who hears it will put you to shame, And the evil report about you will not pass away."							
+							];
+							
+                            const chapter25_3Arr = [
+                                "C25V11 Like apples of gold in settings of silver, Is a word spoken at the proper time.",
+                                "C25V12 Like an earring of gold and a jewelry piece of fine gold, Is a wise person who offers rebukes to a listening ear.",
+                                "C25V13 Like the cold of snow in the time of harvest Is a faithful messenger to those who send him, For he refreshes the soul of his masters.",
+                                "C25V14 Like clouds and wind without rain Is a person who boasts of his gifts falsely.",
+                                "C25V15 Through patience a ruler may be persuaded, And a gentle tongue breaks bone.",
+                                "C25V16 Have you found honey? Eat only what you need, So that you do not have it in excess and vomit it.",
+                                "C25V17 Let your foot rarely be in your neighbor’s house, Or he will become weary of you and hate you.",
+                                "C25V18 Like a club, a sword, and a sharp arrow Is a person who gives false testimony against his neighbor.",
+                                "C25V19 Like a bad tooth and an unsteady foot Is confidence in a treacherous person in time of trouble.",
+                                "C25V20 Like one who takes off a garment on a cold day, or like vinegar on soda, Is one who sings songs to a troubled heart.",
+                                "C25V21 If your enemy is hungry, give him food to eat; And if he is thirsty, give him water to drink;",
+                                "C25V22 For you will heap burning coals on his head, And the Lord will reward you.",
+                                "C25V23 The north wind brings rain, And a gossiping tongue brings an angry face.",
+                                "C25V24 It is better to live on a corner of the roof, Than in a house shared with a contentious woman.",
+                                "C25V25 Like cold water to a weary soul, So is good news from a distant land.",
+                                "C25V26 Like a trampled spring and a polluted well, So is a righteous person who gives way before the wicked.",
+                                "C25V27 It is not good to eat much honey, Nor is it glory to search out one’s own glory.",
+                                "C25V28 Like a city that is broken into and without walls So is a person who has no self_control over his spirit."
+							];
+							
+                            const chapter26Arr = [
+                                "C26V1 Like snow in summer and like rain in harvest, So honor is not fitting for a fool.",
+                                "C26V2 Like a sparrow in its flitting, like a swallow in its flying, So a curse without cause does not come to rest.",
+                                "C26V3 A whip is for the horse, a bridle for the donkey, And a rod for the back of fools.",
+                                "C26V4 Do not answer a fool according to his foolishness, Or you will also be like him.",
+                                "C26V5 Answer a fool as his foolishness deserves, So that he will not be wise in his own eyes.",
+                                "C26V6 One who sends a message by the hand of a fool Chops off his own feet and drinks violence.",
+                                "C26V7 Like useless legs to one who cannot walk, So is a proverb in the mouths of fools.",
+                                "C26V8 Like one who binds a stone in a sling, So is one who gives honor to a fool.",
+                                "C26V9 Like a thorn that sticks in the hand of a heavy drinker, So is a proverb in the mouths of fools.",
+                                "C26V10 Like an archer who wounds everyone, So is one who hires a fool or hires those who pass by.",
+                                "C26V11 Like a dog that returns to its vomit, So is a fool who repeats his foolishness.",
+                                "C26V12 Do you see a person wise in his own eyes? There is more hope for a fool than for him.",
+                                "C26V13 A lazy one says, _There is a lion on the road! A lion is in the public square!_",
+                                "C26V14 As the door turns on its hinges, So does a lazy one on his bed.",
+                                "C26V15 A lazy one buries his hand in the dish; He is weary of bringing it to his mouth again.",
+                                "C26V16 A lazy one is wiser in his own eyes Than seven people who can give a discreet answer.",
+                                "C26V17 Like one who takes a dog by the ears, So is one who passes by and meddles with strife not belonging to him.",
+                                "C26V18 Like a maniac who shoots Flaming arrows, arrows, and death,",
+                                "C26V19 So is a person who deceives his neighbor, And says, _Was I not joking?_",
+                                "C26V20 For lack of wood the fire goes out, And where there is no gossiper, quarreling quiets down.",
+                                "C26V21 Like charcoal to hot embers and wood to fire, So is a contentious person to kindle strife.",
+                                "C26V22 The words of a gossiper are like dainty morsels, And they go down into the innermost parts of the body.",
+                                "C26V23 Like an earthenware vessel overlaid with silver impurities Are burning lips and a wicked heart.",
+                                "C26V24 One who hates disguises it with his lips, But he harbors deceit in his heart.",
+                                "C26V25 When he speaks graciously, do not believe him, Because there are seven abominations in his heart.",
+                                "C26V26 Though his hatred covers itself with deception, His wickedness will be revealed in the assembly.",
+                                "C26V27 One who digs a pit will fall into it, And one who rolls a stone, it will come back on him.",
+                                "C26V28 A lying tongue hates those it crushes, And a flattering mouth works ruin."
+                            ];
+                
+                            const chapter27_1Arr = [
+                                "C27V1 Do not boast about tomorrow, For you do not know what a day may bring.",
+                                "C27V2 Let another praise you, and not your own mouth; A stranger, and not your own lips.",
+                                "C27V3 A stone is heavy and the sand weighty, But the provocation of a fool is heavier than both of them.",
+                                "C27V4 Wrath is fierce and anger is a flood, But who can stand before jealousy?",
+                                "C27V5 Better is open rebuke Than love that is concealed.",
+                                "C27V6 Faithful are the wounds of a friend, But deceitful are the kisses of an enemy.",
+                                "C27V7 A satisfied person despises honey, But to a hungry person any bitter thing is sweet.",
+                                "C27V8 Like a bird that wanders from its nest, So is a person who wanders from his home.",
+                                "C27V9 Oil and perfume make the heart glad, And a person’s advice is sweet to his friend.",
+                                "C27V10 Do not abandon your friend or your father’s friend, And do not go to your brother’s house on the day of your disaster; Better is a neighbor who is near than a brother far away.",
+                                "C27V11 Be wise, my son, and make my heart glad, So that I may reply to one who taunts me.",
+                                "C27V12 A prudent person sees evil and hides himself; But the naive proceed, and pay the penalty.",
+                                "C27V13 Take his garment when he becomes a guarantor for a stranger; And for a foreign woman seize a pledge from him.",
+                                "C27V14 One who blesses his friend with a loud voice early in the morning, It will be considered a curse to him.",
+                                "C27V15 A constant dripping on a day of steady rain And a contentious woman are alike;",
+                                "C27V16 He who would restrain her restrains the wind, And grasps oil with his right hand.",
+                                "C27V17 As iron sharpens iron, So one person sharpens another.",
+                                "C27V18 One who tends the fig tree will eat its fruit, And one who cares for his master will be honored.",
+                                "C27V19 As in water a face reflects the face, So the heart of a person reflects the person.",
+                                "C27V20 Sheol and Abaddon are never satisfied, Nor are the eyes of a person ever satisfied.",
+                                "C27V21 The crucible is for silver and the furnace for gold, And each is tested by the praise accorded him.",
+                                "C27V22 Though you pound the fool in a mortar with a pestle along with crushed grain, His foolishness still will not leave him."
+							];
+							
+							
+                            const chapter27_2Arr = [
+                                "C27V23 Know well the condition of your flocks, And pay attention to your herds;",
+                                "C27V24 For riches are not forever, Nor does a crown endure to all generations.",
+                                "C27V25 When the grass disappears, the new growth is seen, And the herbs of the mountains are gathered in,",
+                                "C27V26 The lambs will be for your clothing, And the goats will bring the price of a field,",
+                                "C27V27 And there will be enough goats’ milk for your food, For the food of your household, And sustenance for your attendants."
+							];
+							
+							
+                            const chapter28Arr = [
+                                "C28V1 The wicked flee when no one is pursuing, But the righteous are bold as a lion.",
+                                "C28V2 Due to a wrongdoing of a land its leaders are many, But by a person of understanding and knowledge, so it endures.",
+                                "C28V3 A poor man who oppresses the helpless Is like a driving rain which leaves no food.",
+                                "C28V4 Those who abandon the Law praise the wicked, But those who keep the Law strive against them.",
+                                "C28V5 Evil people do not understand justice, But those who seek the Lord understand everything.",
+                                "C28V6 Better is a poor person who walks in his integrity, Than a person who is crooked, though he is rich.",
+                                "C28V7 He who keeps the Law is a discerning son, But he who is a companion of gluttons humiliates his father.",
+                                "C28V8 One who increases his wealth by interest of any kind, Collects it for one who is gracious to the poor.",
+                                "C28V9 One who turns his ear away from listening to the Law, Even his prayer is an abomination.",
+                                "C28V10 One who leads the upright astray in an evil way Will himself fall into his own pit, But the blameless will inherit good.",
+                                "C28V11 The rich person is wise in his own eyes, But the poor who has understanding sees through him.",
+                                "C28V12 When the righteous triumph, there is great glory, But when the wicked rise, people hide themselves.",
+                                "C28V13 One who conceals his wrongdoings will not prosper, But one who confesses and abandons them will find compassion.",
+                                "C28V14 How blessed is the person who fears always, But one who hardens his heart will fall into disaster.",
+                                "C28V15 Like a roaring lion and a rushing bear Is a wicked ruler over a poor people.",
+                                "C28V16 A leader who is a great oppressor lacks understanding, But a person who hates unjust gain will prolong his days.",
+                                "C28V17 A person who is burdened with the guilt of human blood Will be a fugitive until death; no one is to support him!",
+                                "C28V18 One who walks blamelessly will receive help, But one who is crooked will fall all at once.",
+                                "C28V19 One who works his land will have plenty of food, But one who follows empty pursuits will have plenty of poverty.",
+                                "C28V20 A faithful person will abound with blessings, But one who hurries to be rich will not go unpunished.",
+                                "C28V21 To show partiality is not good, Because for a piece of bread a man will do wrong.",
+                                "C28V22 A person with an evil eye hurries after wealth And does not know that poverty will come upon him.",
+                                "C28V23 One who rebukes a person will afterward find more favor Than one who flatters with the tongue.",
+                                "C28V24 He who robs his father or his mother And says, _There is no wrong done,_ Is the companion of a person who destroys.",
+                                "C28V25 An arrogant person stirs up strife, But one who trusts in the Lord will prosper.",
+                                "C28V26 One who trusts in his own heart is a fool, But one who walks wisely will flee to safety.",
+                                "C28V27 One who gives to the poor will never lack anything, But one who shuts his eyes will have many curses.",
+                                "C28V28 When the wicked rise, people hide themselves; But when they perish, the righteous increase."
+                            ];
+                
+                            const chapter29Arr = [
+                                "C29V1 A person often rebuked who becomes obstinate Will suddenly be broken beyond remedy.",
+                                "C29V2 When the righteous increase, the people rejoice, But when a wicked person rules, people groan.",
+                                "C29V3 A man who loves wisdom makes his father glad, But he who involves himself with prostitutes wastes his wealth.",
+                                "C29V4 The king gives stability to the land by justice, But a person who takes bribes ruins it.",
+                                "C29V5 A man who flatters his neighbor Is spreading a net for his steps.",
+                                "C29V6 By wrongdoing an evil person is ensnared, But the righteous sings and rejoices.",
+                                "C29V7 The righteous is concerned for the rights of the poor; The wicked does not understand such concern.",
+                                "C29V8 Arrogant people inflame a city, But wise people turn away anger.",
+                                "C29V9 When a wise person has a controversy with a foolish person, The foolish person either rages or laughs, and there is no rest.",
+                                "C29V10 People of bloodshed hate the blameless person, But the upright are concerned for his life.",
+                                "C29V11 A fool always loses his temper, But a wise person holds it back.",
+                                "C29V12 If a ruler pays attention to falsehood, All his ministers become wicked.",
+                                "C29V13 The poor person and the oppressor have this in common: The Lord gives light to the eyes of both.",
+                                "C29V14 If a king judges the poor with truth, His throne will be established forever.",
+                                "C29V15 The rod and a rebuke give wisdom, But a child who gets his own way brings shame to his mother.",
+                                "C29V16 When the wicked increase, wrongdoing increases; But the righteous will see their downfall.",
+                                "C29V17 Correct your son, and he will give you comfort; He will also delight your soul.",
+                                "C29V18 Where there is no vision, the people are unrestrained, But happy is one who keeps the Law.",
+                                "C29V19 A slave will not be instructed by words alone; For though he understands, there will be no response.",
+                                "C29V20 Do you see a person who is hasty with his words? There is more hope for a fool than for him.",
+                                "C29V21 One who pampers his slave from childhood Will in the end find him to be rebellious.",
+                                "C29V22 An angry person stirs up strife, And a hot_tempered person abounds in wrongdoing.",
+                                "C29V23 A person’s pride will bring him low, But a humble spirit will obtain honor.",
+                                "C29V24 One who is a partner with a thief hates his own life; He hears the oath but tells nothing.",
+                                "C29V25 The fear of man brings a snare, But one who trusts in the Lord will be protected.",
+                                "C29V26 Many seek the ruler’s favor, But justice for mankind comes from the Lord.",
+                                "C29V27 An unjust person is an abomination to the righteous, And one who is upright in the way is an abomination to the wicked."
+                            ];
+                
+                            const chapter30_1Arr = [
+                                "C30V1 The words of Agur the son of Jakeh, the pronouncement. The man declares to Ithiel, to Ithiel and Ucal:",
+                                "C30V2 I am certainly more stupid than any man, And I do not have the understanding of a man;",
+                                "C30V3 Nor have I learned wisdom, Nor do I have the knowledge of the Holy One.",
+                                "C30V4 Who has ascended into heaven and descended? Who has gathered the wind in His fists? Who has wrapped the waters in His garment? Who has established all the ends of the earth? What is His name or His Son’s name? Surely you know!"
+							];
+							
+                            const chapter30_2Arr = [
+                                "C30V5 Every word of God is pure; He is a shield to those who take refuge in Him.",
+                                "C30V6 Do not add to His words Or He will rebuke you, and you will be proved a liar."							
+							];
+							
+                            const chapter30_3Arr = [
+                                "C30V7 Two things I have asked of You; Do not refuse me before I die:",
+                                "C30V8 Keep deception and lies far from me, Give me neither poverty nor riches; Feed me with the food that is my portion,",
+                                "C30V9 So that I will not be full and deny You and say, _Who is the Lord?_ And that I will not become impoverished and steal, And profane the name of my God."
+							];
+							
+                            const chapter30_4Arr = [
+                                "C30V10 Do not slander a slave to his master, Or he will curse you and you will be found guilty."
+							];
+							
+                            const chapter30_5Arr = [
+                                "C30V11 There is a kind of person who curses his father And does not bless his mother.",
+                                "C30V12 There is a kind who is pure in his own eyes, Yet is not washed from his filthiness.",
+                                "C30V13 There is a kind—oh how lofty are his eyes! And his eyelids are raised in arrogance.",
+                                "C30V14 There is a kind of person whose teeth are like swords And his jaw teeth like knives, To devour the poor from the earth And the needy from among mankind."
+							];
+							
+                            const chapter30_6Arr = [
+                                "C30V15 The leech has two daughters: _Give_ and _Give._ There are three things that will not be satisfied, Four that will not say, _Enough_:",
+                                "C30V16 Sheol, the infertile womb, Earth that is never satisfied with water, And fire that never says, _Enough._",
+                                "C30V17 The eye that mocks a father And scorns a mother, The ravens of the valley will pick it out, And the young eagles will eat it."
+							];
+							
+                            const chapter30_7Arr = [
+                                "C30V18 There are three things which are too wonderful for me, Four which I do not understand:",
+                                "C30V19 The way of the eagle in the sky, The way of a snake on a rock, The way of a ship in the middle of the sea, And the way of a man with a virgin.",
+                                "C30V20 This is the way of an adulterous woman: She eats and wipes her mouth, And says, _I have done no wrong._"
+							];
+							
+                            const chapter30_8Arr = [
+                                "C30V21 Under three things the earth quakes, And under four, it cannot endure:",
+                                "C30V22 Under a slave when he becomes king, And a fool when he is satisfied with food,",
+                                "C30V23 Under an unloved woman when she gets a husband, And a female servant when she dispossesses her mistress."
+							];
+							
+                            const chapter30_9Arr = [
+                                "C30V24 Four things are small on the earth, But they are exceedingly wise:",
+                                "C30V25 The ants are not a strong people, But they prepare their food in the summer;",
+                                "C30V26 The rock hyraxes are not a mighty people, Yet they make their houses in the rocks;",
+                                "C30V27 The locusts have no king, Yet all of them go out in ranks;",
+                                "C30V28 The lizard you may grasp with the hands, Yet it is in kings’ palaces."
+							];
+							
+                            const chapter30_10Arr = [
+                                "C30V29 There are three things which are stately in their march, Even four which are stately when they walk:",
+                                "C30V30 The lion, which is mighty among animals And does not retreat from anything,",
+                                "C30V31 The strutting rooster or the male goat, And a king when his army is with him."							
+							];
+							
+                            const chapter30_11Arr = [
+                                "C30V32 If you have been foolish in exalting yourself, Or if you have plotted evil, put your hand on your mouth.",
+                                "C30V33 For the churning of milk produces butter, And pressing the nose produces blood; So the churning of anger produces strife."
+							];
+							
+                
+                            const chapter31_1Arr = [
+                                "C31V1 The words of King Lemuel, the pronouncement which his mother taught him:",
+                                "C31V2 What, my son? And what, son of my womb? And what, son of my vows?",
+                                "C31V3 Do not give your strength to women, Or your ways to that which destroys kings.",
+                                "C31V4 It is not for kings, Lemuel, It is not for kings to drink wine, Or for rulers to desire intoxicating drink,",
+                                "C31V5 Otherwise they will drink and forget what is decreed, And pervert the rights of all the needy.",
+                                "C31V6 Give intoxicating drink to one who is perishing, And wine to one whose life is bitter.",
+                                "C31V7 Let him drink and forget his poverty, And remember his trouble no more.",
+                                "C31V8 Open your mouth for the people who cannot speak, For the rights of all the unfortunate.",
+                                "C31V9 Open your mouth, judge righteously, And defend the rights of the poor and needy. Description of a Worthy Woman"							
+							];
+							
+                            const chapter31_2Arr = [
+                                "C31V10 An excellent wife, who can find her? For her worth is far above jewels.",
+                                "C31V11 The heart of her husband trusts in her, And he will have no lack of gain.",
+                                "C31V12 She does him good and not evil All the days of her life.",
+                                "C31V13 She looks for wool and linen, And works with her hands in delight.",
+                                "C31V14 She is like merchant ships; She brings her food from afar.",
+                                "C31V15 And she rises while it is still night And gives food to her household, And portions to her attendants.",
+                                "C31V16 She considers a field and buys it; From her earnings she plants a vineyard.",
+                                "C31V17 She surrounds her waist with strength And makes her arms strong.",
+                                "C31V18 She senses that her profit is good; Her lamp does not go out at night.",
+                                "C31V19 She stretches out her hands to the distaff, And her hands grasp the spindle.",
+                                "C31V20 She extends her hand to the poor, And she stretches out her hands to the needy.",
+                                "C31V21 She is not afraid of the snow for her household, For all her household are clothed with scarlet.",
+                                "C31V22 She makes coverings for herself; Her clothing is fine linen and purple.",
+                                "C31V23 Her husband is known in the gates, When he sits among the elders of the land.",
+                                "C31V24 She makes linen garments and sells them, And supplies belts to the tradesmen.",
+                                "C31V25 Strength and dignity are her clothing, And she smiles at the future.",
+                                "C31V26 She opens her mouth in wisdom, And the teaching of kindness is on her tongue.",
+                                "C31V27 She watches over the activities of her household, And does not eat the bread of idleness.",
+                                "C31V28 Her children rise up and bless her; Her husband also, and he praises her, saying:",
+                                "C31V29 _Many daughters have done nobly, But you excel them all._",
+                                "C31V30 Charm is deceitful and beauty is vain, But a woman who fears the Lord, she shall be praised.",
+                                "C31V31 Give her the product of her hands, And let her works praise her in the gates."
+                            ];
+
+
+                            const chapters = [];
+                            for (let i = 0; i < 7; i++) {
+                                // chapters.push(chapter22_6Arr);
+                                // chapters.push(chapter30_8Arr);
+                                // chapters.push(chapter19Arr);
+                                // chapters.push(chapter23_7Arr);
+                                // chapters.push(chapter7_1Arr);
+                                // chapters.push(chapter6_5Arr);
+                                // chapters.push(chapter3_3Arr);
+                                // chapters.push(chapter26Arr);
+                                // chapters.push(chapter23_9Arr);
+                                // chapters.push(chapter6_1Arr);
+                                // chapters.push(chapter24_9Arr);
+                                // chapters.push(chapter23_1Arr);
+                                // chapters.push(chapter22_1Arr);
+                                // chapters.push(chapter12Arr);
+                                // chapters.push(chapter24_5Arr);
+                                // chapters.push(chapter22_2Arr);
+                                // chapters.push(chapter23_3Arr);
+                                // chapters.push(chapter6_3Arr);
+                                // chapters.push(chapter5_2Arr);
+                                // chapters.push(chapter24_3Arr);
+                                // chapters.push(chapter22_4Arr);
+                                // chapters.push(chapter15Arr);
+                                // chapters.push(chapter24_14Arr);
+                                // chapters.push(chapter9_2Arr);
+                                // chapters.push(chapter1_2Arr);
+                                // chapters.push(chapter22_7Arr);
+                                // chapters.push(chapter31_2Arr);
+                                // chapters.push(chapter6_2Arr);
+                                // chapters.push(chapter4_1Arr);
+                                // chapters.push(chapter25_3Arr);
+                                // chapters.push(chapter16Arr);
+                                // chapters.push(chapter2Arr);
+                                // chapters.push(chapter23_5Arr);
+                                // chapters.push(chapter30_10Arr);
+                                // chapters.push(chapter3_1Arr);
+                                // chapters.push(chapter11Arr);
+                                // chapters.push(chapter25_2Arr);
+                                // chapters.push(chapter4_3Arr);
+                                // chapters.push(chapter25_1Arr);
+                                chapters.push(chapter23_10Arr);
+                                // chapters.push(chapter28Arr);
+                                // chapters.push(chapter24_12Arr);
+                                // chapters.push(chapter30_2Arr);
+                                // chapters.push(chapter5_1Arr);
+                                // chapters.push(chapter18Arr);
+                                // chapters.push(chapter13Arr);
+                                // chapters.push(chapter17Arr);
+                                // chapters.push(chapter24_11Arr);
+                                // chapters.push(chapter20Arr);
+                                // chapters.push(chapter22_5Arr);
+                                // chapters.push(chapter29Arr);
+                                // chapters.push(chapter30_7Arr);
+                                // chapters.push(chapter6_4Arr);
+                                // chapters.push(chapter24_1Arr);
+                                // chapters.push(chapter24_8Arr);
+                                // chapters.push(chapter9_1Arr);
+                                // chapters.push(chapter30_3Arr);
+                                // chapters.push(chapter22_3Arr);
+                                // chapters.push(chapter24_10Arr);
+                                // chapters.push(chapter23_4Arr);
+                                // chapters.push(chapter23_6Arr);
+                                // chapters.push(chapter27_1Arr);
+                                // chapters.push(chapter30_6Arr);
+                                // chapters.push(chapter30_9Arr);
+                                // chapters.push(chapter8_1Arr);
+                                // chapters.push(chapter3_2Arr);
+                                // chapters.push(chapter24_6Arr);
+                                // chapters.push(chapter23_2Arr);
+                                // chapters.push(chapter31_1Arr);
+                                // chapters.push(chapter8_2Arr);
+                                // chapters.push(chapter24_4Arr);
+                                // chapters.push(chapter14Arr);
+                                // chapters.push(chapter8_4Arr);
+                                // chapters.push(chapter10Arr);
+                                // chapters.push(chapter1_1Arr);
+                                // chapters.push(chapter30_5Arr);
+                                // chapters.push(chapter23_8Arr);
+                                // chapters.push(chapter23_11Arr);
+                                // chapters.push(chapter21Arr);
+                                // chapters.push(chapter8_3Arr);
+                                // chapters.push(chapter4_2Arr);
+                                // chapters.push(chapter7_3Arr);
+                                // chapters.push(chapter9_3Arr);
+                                // chapters.push(chapter5_3Arr);
+                                // chapters.push(chapter1_3Arr);
+                                // chapters.push(chapter30_4Arr);
+                                // chapters.push(chapter24_13Arr);
+                                // chapters.push(chapter30_11Arr);
+                                // chapters.push(chapter24_7Arr);
+                                // chapters.push(chapter30_1Arr);
+                                // chapters.push(chapter7_2Arr);
+                                // chapters.push(chapter24_2Arr);
+                                // chapters.push(chapter27_2Arr);
+                            }
+                            shuffleArray(chapters);
+                            const currVerses = chapters[0];
+
+                            startIdx = 1;
+                            endIdx = currVerses.length;
+                            const truncArr = currVerses.splice(startIdx - 1, endIdx);
+
+                            const excludedWords = ["a", "above", "across", "after", "against", "all", "along", "am", "among", "an", "and", "any", "are", "but", "can", "did", "for", "had", "has", "her", "him", "his", "how", "its", "may", "nor", "not", "off", "one", "she", "too", "who", "why", "yet", "you", "each", "from", "goes", "have", "into", "much", "must", "none", "ones", "only", "are", "around", "as", "at", "be", "before", "behind", "behold", "beyond", "cannot", "either", "having", "indeed", "should", "surely", "though", "unless", "because", "between", "herself", "himself", "although", "below", "beneath", "beside", "between", "but", "by", "consequently", "do", "down", "even", "example", "finally", "for", "from", "furthermore", "go", "he", "hence", "her", "hers", "him", "however", "i", "if", "in", "inasmuch", "incidentally", "indeed", "instead", "into", "is", "it", "just", "once", "says", "such", "than", "that", "them", "then", "they", "this", "thus", "were", "what", "when", "whom", "will", "with", "your", "about", "above", "after", "along", "among", "aside", "where", "which", "while", "whose", "would", "likewise", "me", "meanwhile", "my", "near", "no", "nor", "now", "o", "of", "off", "oh", "on", "once", "or", "ox", "she", "since", "so", "supposing", "that", "the", "their", "them", "they", "those", "though", "to", "toward", "under", "until", "up", "upon", "us", "we", "whenever", "whereas", "wherever", "which", "while", "who", "with", "within", "yet", "you", "your"];
+
+                            for (let i = 0; i < truncArr.length; i++) {
+                                const theWords = truncArr[i].replaceAll(" ", "-");
+                                let arr = theWords.split("-");
+                                var endIndex = arr.length - 1;
+
+                                let usableIdx = [];
+                                for (let j = 1; j < arr.length; j++) {
+                                    var currWord1 = arr[j].toLowerCase().replaceAll(";", "");
+                                    var currWord2 = arr[j].toLowerCase().replaceAll("_", "");
+                                    var currWord3 = arr[j].toLowerCase().replaceAll("-", "");
+                                    if (!excludedWords.includes(currWord1) 
+                                        || !excludedWords.includes(currWord2) 
+                                        || !excludedWords.includes(currWord3)) {
+                                        usableIdx.push(j);
+                                    }
+                                }
+
+                                shuffleArray(usableIdx);
+                                var guessWordIdx = usableIdx[0];
+                                var guessWord = arr[guessWordIdx];
+                                arr[guessWordIdx] = "[_____]";
+                                alert(arr.join(' '));
+                                alert("ANSWER: " + guessWord);
+                            }
+                        };
+
+                        window.onload = function() {
+                            document.getElementById('randomButton').click();
+                        }
+
+                        econRated = function () {
+
+                            let url = 'https://raw.githubusercontent.com/cjcaf1995/info/main/limits.js';
+
+                            fetch(url)
+                            .then(res => res.json())
+                            .then(useValueForEconRated)
+                            .catch(err => { throw err });
+                        };
+
+                        async function useValueForEconRated(value) {
+
+                            var maxOf1s = value["skills0915OneStarMax"];
+                            var maxOf2s = value["skills0915TwoStarMax"];
+                            var maxOf3s = value["skills0915ThreeStarMax"];
+                            var maxOf4s = value["skills0915FourStarMax"];
+                            var maxOf5s = value["skills0915FiveStarMax"];
+
+                        	var buckets = [];
+                        	var probabilityOf1s = 9;
+                        	var probabilityOf2s = 13;
+                        	var probabilityOf3s = 17;
+                        	var probabilityOf4s = 25;
+                        	var probabilityOf5s = 36;
+
+                            for (let i = 0; i < probabilityOf1s; i++) {
+                              buckets.push(1);
+                            }
+                            for (let i = 0; i < probabilityOf2s; i++) {
+                              buckets.push(2);
+                            }
+                            for (let i = 0; i < probabilityOf3s; i++) {
+                              buckets.push(3);
+                            }
+                            for (let i = 0; i < probabilityOf4s; i++) {
+                              buckets.push(4);
+                            }
+                            for (let i = 0; i < probabilityOf5s; i++) {
+                              buckets.push(5);
+                            }
+
+                            var randIdx = getRandomNumber(uuidv4()) % buckets.length;
+                            randIdx = parseInt(randIdx, 10);
+
+                            var chosenBucket = [];
+
+                            if (buckets[randIdx] === 1) {
+                                for (let i = 1; i <= maxOf1s; i++) {
+                                  chosenBucket.push(i);
+                                }
+                            	shuffleArray(chosenBucket);
+                                randIdx = getRandomNumber(uuidv4()) % chosenBucket.length;
+                                randIdx = parseInt(randIdx, 10);
+                                window.open('https://github.com/cjcaf1995/skills0915-one-star/issues/' + chosenBucket[randIdx]);
+                            } else if (buckets[randIdx] === 2) {
+                                for (let i = 1; i <= maxOf2s; i++) {
+                                  chosenBucket.push(i);
+                                }
+                            	shuffleArray(chosenBucket);
+                                randIdx = getRandomNumber(uuidv4()) % chosenBucket.length;
+                                randIdx = parseInt(randIdx, 10);
+                                window.open('https://github.com/cjcaf1995/skills0915-two-star/issues/' + chosenBucket[randIdx]);
+                            } else if (buckets[randIdx] === 3) {
+                                for (let i = 1; i <= maxOf3s; i++) {
+                                  chosenBucket.push(i);
+                                }
+                            	shuffleArray(chosenBucket);
+                                randIdx = getRandomNumber(uuidv4()) % chosenBucket.length;
+                                randIdx = parseInt(randIdx, 10);
+                                window.open('https://github.com/cjcaf1995/skills0915-three-star/issues/' + chosenBucket[randIdx]);
+                            } else if (buckets[randIdx] === 4) {
+                                for (let i = 1; i <= maxOf4s; i++) {
+                                  chosenBucket.push(i);
+                                }
+                            	shuffleArray(chosenBucket);
+                                randIdx = getRandomNumber(uuidv4()) % chosenBucket.length;
+                                randIdx = parseInt(randIdx, 10);
+                                window.open('https://github.com/cjcaf1995/skills0915-four-star/issues/' + chosenBucket[randIdx]);
+                            } else if (buckets[randIdx] === 5) {
+                                for (let i = 1; i <= maxOf5s; i++) {
+                                  chosenBucket.push(i);
+                                }
+                            	shuffleArray(chosenBucket);
+                                randIdx = getRandomNumber(uuidv4()) % chosenBucket.length;
+                                randIdx = parseInt(randIdx, 10);
+                                window.open('https://github.com/cjcaf1995/skills0915-five-star/issues/' + chosenBucket[randIdx]);
+                            }
+
+                        }
+
+                        function shuffleArray(array) {
+                            for (var i = array.length - 1; i > 0; i--) {
+                                var j = Math.floor(Math.random() * (i + 1));
+                                var temp = array[i];
+                                array[i] = array[j];
+                                array[j] = temp;
+                            }
+                        }
+
+                        function uuidv4() {
+                          return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+                            (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+                          );
+                        }
+
+                        function getNumberEquivalent(strChar) {
+                            let retVal = 0;
+                            switch (strChar) {
+                              case 'a':
+                                retVal = 1;
+                                break;
+                              case 'b':
+                                retVal = 2;
+                                break;
+                              case 'c':
+                                retVal = 3;
+                                break;
+                              case 'd':
+                                retVal = 4;
+                                break;
+                              case 'e':
+                                retVal = 5;
+                                break;
+                              case 'f':
+                                retVal = 6;
+                                break;
+                              case 'g':
+                                retVal = 7;
+                                break;
+                              case 'h':
+                                retVal = 8;
+                                break;
+                              case 'i':
+                                retVal = 9;
+                                break;
+                              case 'j':
+                                retVal = 10;
+                                break;
+                              case 'k':
+                                retVal = 11;
+                                break;
+                              case 'l':
+                                retVal = 12;
+                                break;
+                              case 'm':
+                                retVal = 13;
+                                break;
+                              case 'n':
+                                retVal = 14;
+                                break;
+                              case 'o':
+                                retVal = 15;
+                                break;
+                              case 'p':
+                                retVal = 16;
+                                break;
+                              case 'q':
+                                retVal = 17;
+                                break;
+                              case 'r':
+                                retVal = 18;
+                                break;
+                              case 's':
+                                retVal = 19;
+                                break;
+                              case 't':
+                                retVal = 20;
+                                break;
+                              case 'u':
+                                retVal = 21;
+                                break;
+                              case 'v':
+                                retVal = 22;
+                                break;
+                              case 'w':
+                                retVal = 23;
+                                break;
+                              case 'x':
+                                retVal = 24;
+                                break;
+                              case 'y':
+                                retVal = 25;
+                                break;
+                              case 'z':
+                                retVal = 26;
+                                break;
+                              default:
+                                break;
+                            }
+                            return retVal;
+                        }
+
+                        function getRandomNumber(uuidString) {
+                            let uuidWithoutDash = uuidString.replaceAll("-", "");
+                            var retVal = 0
+                            var char01 = uuidWithoutDash.charAt(1 - 1);
+                            if (/^\d+$/.test(char01)) {
+                                retVal = retVal + Number(char01);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char01));
+                            }
+
+                            var char02 = uuidWithoutDash.charAt(2 - 1);
+                            if (/^\d+$/.test(char02)) {
+                                retVal = retVal + Number(char02);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char02));
+                            }
+
+                            var char03 = uuidWithoutDash.charAt(3 - 1);
+                            if (/^\d+$/.test(char03)) {
+                                retVal = retVal + Number(char03);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char03));
+                            }
+
+                            var char04 = uuidWithoutDash.charAt(4 - 1);
+                            if (/^\d+$/.test(char04)) {
+                                retVal = retVal + Number(char04);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char04));
+                            }
+
+                            var char05 = uuidWithoutDash.charAt(5 - 1);
+                            if (/^\d+$/.test(char05)) {
+                                retVal = retVal + Number(char05);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char05));
+                            }
+
+                            var char06 = uuidWithoutDash.charAt(6 - 1);
+                            if (/^\d+$/.test(char06)) {
+                                retVal = retVal + Number(char06);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char06));
+                            }
+
+                            var char07 = uuidWithoutDash.charAt(7 - 1);
+                            if (/^\d+$/.test(char07)) {
+                                retVal = retVal + Number(char07);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char07));
+                            }
+
+                            var char08 = uuidWithoutDash.charAt(8 - 1);
+                            if (/^\d+$/.test(char08)) {
+                                retVal = retVal + Number(char08);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char08));
+                            }
+
+                            var char09 = uuidWithoutDash.charAt(9 - 1);
+                            if (/^\d+$/.test(char09)) {
+                                retVal = retVal + Number(char09);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char09));
+                            }
+
+                            var char10 = uuidWithoutDash.charAt(10 - 1);
+                            if (/^\d+$/.test(char10)) {
+                                retVal = retVal + Number(char10);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char10));
+                            }
+
+                            var char11 = uuidWithoutDash.charAt(11 - 1);
+                            if (/^\d+$/.test(char11)) {
+                                retVal = retVal + Number(char11);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char11));
+                            }
+
+                            var char12 = uuidWithoutDash.charAt(12 - 1);
+                            if (/^\d+$/.test(char12)) {
+                                retVal = retVal + Number(char12);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char12));
+                            }
+
+                            var char13 = uuidWithoutDash.charAt(13 - 1);
+                            if (/^\d+$/.test(char13)) {
+                                retVal = retVal + Number(char13);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char13));
+                            }
+
+                            var char14 = uuidWithoutDash.charAt(14 - 1);
+                            if (/^\d+$/.test(char14)) {
+                                retVal = retVal + Number(char14);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char14));
+                            }
+
+                            var char15 = uuidWithoutDash.charAt(15 - 1);
+                            if (/^\d+$/.test(char15)) {
+                                retVal = retVal + Number(char15);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char15));
+                            }
+
+                            var char16 = uuidWithoutDash.charAt(16 - 1);
+                            if (/^\d+$/.test(char16)) {
+                                retVal = retVal + Number(char16);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char16));
+                            }
+
+                            var char17 = uuidWithoutDash.charAt(17 - 1);
+                            if (/^\d+$/.test(char17)) {
+                                retVal = retVal + Number(char17);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char17));
+                            }
+
+                            var char18 = uuidWithoutDash.charAt(18 - 1);
+                            if (/^\d+$/.test(char18)) {
+                                retVal = retVal + Number(char18);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char18));
+                            }
+
+                            var char19 = uuidWithoutDash.charAt(19 - 1);
+                            if (/^\d+$/.test(char19)) {
+                                retVal = retVal + Number(char19);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char19));
+                            }
+
+                            var char20 = uuidWithoutDash.charAt(20 - 1);
+                            if (/^\d+$/.test(char20)) {
+                                retVal = retVal + Number(char20);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char20));
+                            }
+
+                            var char21 = uuidWithoutDash.charAt(21 - 1);
+                            if (/^\d+$/.test(char21)) {
+                                retVal = retVal + Number(char21);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char21));
+                            }
+
+                            var char22 = uuidWithoutDash.charAt(22 - 1);
+                            if (/^\d+$/.test(char22)) {
+                                retVal = retVal + Number(char22);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char22));
+                            }
+
+                            var char23 = uuidWithoutDash.charAt(23 - 1);
+                            if (/^\d+$/.test(char23)) {
+                                retVal = retVal + Number(char23);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char23));
+                            }
+
+                            var char24 = uuidWithoutDash.charAt(24 - 1);
+                            if (/^\d+$/.test(char24)) {
+                                retVal = retVal + Number(char24);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char24));
+                            }
+
+                            var char25 = uuidWithoutDash.charAt(25 - 1);
+                            if (/^\d+$/.test(char25)) {
+                                retVal = retVal + Number(char25);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char25));
+                            }
+
+                            var char26 = uuidWithoutDash.charAt(26 - 1);
+                            if (/^\d+$/.test(char26)) {
+                                retVal = retVal + Number(char26);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char26));
+                            }
+
+                            var char27 = uuidWithoutDash.charAt(27 - 1);
+                            if (/^\d+$/.test(char27)) {
+                                retVal = retVal + Number(char27);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char27));
+                            }
+
+                            var char28 = uuidWithoutDash.charAt(28 - 1);
+                            if (/^\d+$/.test(char28)) {
+                                retVal = retVal + Number(char28);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char28));
+                            }
+
+                            var char29 = uuidWithoutDash.charAt(29 - 1);
+                            if (/^\d+$/.test(char29)) {
+                                retVal = retVal + Number(char29);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char29));
+                            }
+
+                            var char30 = uuidWithoutDash.charAt(30 - 1);
+                            if (/^\d+$/.test(char30)) {
+                                retVal = retVal + Number(char30);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char30));
+                            }
+
+                            var char31 = uuidWithoutDash.charAt(31 - 1);
+                            if (/^\d+$/.test(char31)) {
+                                retVal = retVal + Number(char31);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char31));
+                            }
+
+                            var char32 = uuidWithoutDash.charAt(32 - 1);
+                            if (/^\d+$/.test(char32)) {
+                                retVal = retVal + Number(char32);
+                            } else {
+                                retVal = retVal + Number(getNumberEquivalent(char32));
+                            }
+
+                            return ((retVal * 3485038 * Math.floor(Math.random() * 100)) + (new Date().getFullYear() + (new Date().getMonth() + 1) + new Date().getDay() + new Date().getTime())) % 100;
+                        }
+        </script>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div style="text-align: center;">
+            <button id="randomButton" onclick="openStuff();">RDR</button>
+            <button id="econRated" onclick="econRated();" class="btn btn-success btn-lg">econRated</button>
+        </div>
+    </body>
+</html>
